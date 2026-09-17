@@ -2,126 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>A.B Plumbers | Gqeberha & Nelson Mandela Bay</title>
-  <meta name="description" content="A.B Plumbers in Ben Kamma, Gqeberha. Leak detection, geyser repairs, blocked drains and installations. WhatsApp 074 530 2232." />
-  <meta name="theme-color" content="#0c1412" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A.B Plumbers | Gqeberha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Instrument+Serif&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#f6f1e8; --ink:#141a18; --muted:#5c6662; --line:#ddd4c6; --dark:#0c1412; --card:#fffdf8; --brass:#b68a4a; --brass-2:#c9a063; --green:#1f8f56; }
-    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
-    body{font-family:"Instrument Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-    img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
-    .wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
-    header{position:sticky;top:0;z-index:20;background:rgba(12,20,18,.92);backdrop-filter:blur(16px);color:#fff}
-    .nav{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:12px}
+    :root{--bg:#f6f1e8;--ink:#141a18;--muted:#5c6662;--line:#ddd4c6;--dark:#0c1412;--card:#fffdf8;--brass:#b68a4a;--brass-2:#c9a063;--green:#1f8f56}
+    *{box-sizing:border-box;margin:0;padding:0}body{font-family:Instrument Sans,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+    img{max-width:100%;display:block}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(12,20,18,.92);color:#fff}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:68px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:700}
-    .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(160deg,var(--brass-2),#8b6328);display:grid;place-items:center;color:#1a140c;font-size:13px;font-weight:800}
-    .brand small{display:block;font-size:11px;font-weight:500;color:#c9d2cd;letter-spacing:.08em;text-transform:uppercase}
-    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;font-weight:650;font-size:14px;border:0}
-    .btn-brass{background:var(--brass);color:#1a140c}
-    .btn-dark{background:var(--dark);color:#fff}
-    .btn-line{border:1px solid rgba(255,255,255,.25);color:#fff}
-    .hero{background:linear-gradient(90deg,rgba(12,20,18,.86),rgba(12,20,18,.42) 58%,rgba(12,20,18,.2)),url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;color:#fff;padding:64px 0 56px}
+    .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(160deg,var(--brass-2),#8b6328);display:grid;place-items:center;color:#1a140c;font-weight:800}
+    .brand small{display:block;font-size:11px;color:#c9d2cd;letter-spacing:.08em;text-transform:uppercase}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;font-weight:700;font-size:14px;border:0}
+    .btn-brass{background:var(--brass);color:#1a140c}.btn-dark{background:var(--dark);color:#fff}.btn-line{border:1px solid rgba(255,255,255,.25);color:#fff}
+    .hero{background:linear-gradient(90deg,rgba(12,20,18,.86),rgba(12,20,18,.35)),url("https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1800") center/cover no-repeat;color:#fff;padding:64px 0 56px}
     .eyebrow{color:var(--brass-2);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
-    h1{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(40px,8vw,76px);line-height:.95;font-weight:400;max-width:11ch;margin-bottom:16px}
+    h1{font-family:Instrument Serif,Georgia,serif;font-size:clamp(40px,8vw,76px);line-height:.95;font-weight:400;max-width:11ch;margin-bottom:16px}
     .lead{max-width:46ch;color:#e6ebe8;font-size:17px;margin-bottom:28px}
     .actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
     .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:620px}
     .trust div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px}
-    .trust b{display:block;font-size:15px}
-    .trust span{color:#c7d0cb;font-size:12px}
-    section{padding:68px 0}
-    h2{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(30px,5vw,46px);font-weight:400;line-height:1.05;margin:8px 0 12px}
+    .trust b{display:block} .trust span{color:#c7d0cb;font-size:12px}
+    section{padding:68px 0} h2{font-family:Instrument Serif,Georgia,serif;font-size:clamp(30px,5vw,46px);font-weight:400;margin:8px 0 12px}
     .sub{color:var(--muted);max-width:58ch}
     .services{display:grid;gap:14px;margin-top:28px}
     .service{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:118px 1fr}
     .service img{width:118px;height:100%;object-fit:cover;min-height:118px}
-    .service div{padding:16px 16px 16px 18px}
-    .service h3{font-size:18px;margin-bottom:6px}
-    .service p{color:var(--muted);font-size:14px}
-    .dark{background:var(--dark);color:#fff}
-    .cols{display:grid;gap:22px;margin-top:28px}
-    .cols article{border-top:1px solid rgba(255,255,255,.14);padding-top:16px}
-    .cols h3{font-size:18px;margin-bottom:8px}
-    .cols p{color:#c5ceca}
+    .service div{padding:16px 18px}.service h3{margin-bottom:6px}.service p{color:var(--muted);font-size:14px}
+    .dark{background:var(--dark);color:#fff}.cols{display:grid;gap:22px;margin-top:28px}
+    .cols article{border-top:1px solid rgba(255,255,255,.14);padding-top:16px}.cols p{color:#c5ceca}
     .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
     .chip{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 12px;font-size:13px;color:#d7ddd9}
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:16px}
     .contact-grid{display:grid;gap:16px;margin-top:28px}
     .panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
-    .panel h3{margin-bottom:8px}
-    .panel p,.panel li{color:var(--muted)}
-    .panel ul{padding-left:18px;margin-top:10px}
-    .big-num{font-family:"Instrument Serif",Georgia,serif;font-size:34px;margin:10px 0}
+    .panel p,.panel li{color:var(--muted)}.panel ul{padding-left:18px;margin-top:10px}
+    .big-num{font-family:Instrument Serif,Georgia,serif;font-size:34px;margin:10px 0}
     footer{padding:28px 0 96px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
-    .float{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--green);color:#fff;font-weight:700;padding:14px 18px;border-radius:999px;box-shadow:0 12px 30px rgba(12,20,18,.2)}
-    @media (min-width:760px){.services{grid-template-columns:1fr 1fr}.cols,.contact-grid{grid-template-columns:1fr 1fr 1fr}.service{grid-template-columns:150px 1fr}.service img{width:150px}}
+    .float{position:fixed;right:16px;bottom:16px;background:var(--green);color:#fff;font-weight:700;padding:14px 18px;border-radius:999px}
+    @media (min-width:760px){.services{grid-template-columns:1fr 1fr}.cols,.contact-grid{grid-template-columns:1fr 1fr 1fr}.service{grid-template-columns:150px 1fr}.service img{width:150px}.gallery{grid-template-columns:repeat(4,1fr)}.gallery img{height:210px}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand"><div class="mark">AB</div><div>A.B Plumbers<small>Gqeberha</small></div></div>
-      <a class="btn btn-brass" href="https://wa.me/27745302232">WhatsApp</a>
-    </div>
-  </header>
-  <section class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Ben Kamma · Nelson Mandela Bay</div>
-      <h1>Reliable plumbing, close to home.</h1>
-      <p class="lead">Burst pipes, leaking geysers, blocked drains and everyday repairs across Gqeberha. Call or WhatsApp A.B Plumbers and get a clear next step.</p>
-      <div class="actions">
-        <a class="btn btn-brass" href="tel:+27745302232">Call 074 530 2232</a>
-        <a class="btn btn-line" href="https://wa.me/27745302232?text=Hi%20A.B%20Plumbers%2C%20I%20need%20help%20with%20">Request a quote</a>
-      </div>
-      <div class="trust">
-        <div><b>Local team</b><span>Based in Ben Kamma</span></div>
-        <div><b>Clear pricing</b><span>Affordable, no runaround</span></div>
-        <div><b>Guaranteed</b><span>100% satisfaction</span></div>
-      </div>
-    </div>
-  </section>
-  <section id="services">
-    <div class="wrap">
-      <div class="eyebrow" style="color:var(--brass)">Services</div>
-      <h2>What we come out for.</h2>
-      <p class="sub">The work homes and small businesses in Nelson Mandela Bay actually need done — quickly and neatly.</p>
-      <div class="services">
-        <article class="service"><img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=600&q=80" alt="" /><div><h3>Leak detection & repairs</h3><p>Dripping taps, burst pipes and hidden leaks before they damage ceilings, floors or the water bill.</p></div></article>
-        <article class="service"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" /><div><h3>Geysers</h3><p>Repair, replace and install geysers when there is no hot water in the morning.</p></div></article>
-        <article class="service"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="" /><div><h3>Blocked drains</h3><p>Toilets, showers, kitchen sinks and outside drains cleared properly.</p></div></article>
-        <article class="service"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="" /><div><h3>Installations</h3><p>New taps, toilets, showers, piping, bathroom and kitchen plumbing.</p></div></article>
-      </div>
-    </div>
-  </section>
-  <section class="dark">
-    <div class="wrap">
-      <div class="eyebrow">Why A.B Plumbers</div>
-      <h2>Straight work. Fair price. A local number.</h2>
-      <div class="cols">
-        <article><h3>Based in Ben Kamma</h3><p>You are messaging a Gqeberha plumber, not a national call centre.</p></article>
-        <article><h3>Quality without fuss</h3><p>Good workmanship at prices people in the Bay can actually afford.</p></article>
-        <article><h3>100% satisfaction</h3><p>If the job is not right, we come back and make it right.</p></article>
-      </div>
-      <div class="chips">
-        <span class="chip">Ben Kamma</span><span class="chip">Walmer</span><span class="chip">Newton Park</span><span class="chip">Summerstrand</span><span class="chip">Kabega</span><span class="chip">Lorraine</span><span class="chip">Humewood</span><span class="chip">Despatch</span><span class="chip">Kariega</span>
-      </div>
-    </div>
-  </section>
-  <section id="contact">
-    <div class="wrap">
-      <div class="eyebrow" style="color:var(--brass)">Contact</div>
-      <h2>Need a plumber today?</h2>
-      <div class="contact-grid">
-        <div class="panel"><h3>WhatsApp or call</h3><div class="big-num">074 530 2232</div><p>Tell us what is leaking, blocked or broken. We will come back with the next step.</p><div class="actions" style="margin:16px 0 0"><a class="btn btn-brass" href="https://wa.me/27745302232">WhatsApp</a><a class="btn btn-dark" href="tel:+27745302232">Call now</a></div></div>
-        <div class="panel"><h3>Where we work</h3><p>Van Wyk Street area, Ben Kamma, Port Elizabeth / Gqeberha, Eastern Cape.</p><ul><li>Homes across Nelson Mandela Bay</li><li>Small business call-outs</li><li>Repairs and new installations</li></ul></div>
-        <div class="panel"><h3>How it works</h3><ul><li>Send a photo or short voice note</li><li>We confirm what the job looks like</li><li>We come out and finish it cleanly</li></ul></div>
-      </div>
-    </div>
-  </section>
-  <footer><div class="wrap">A.B Plumbers · Gqeberha · 074 530 2232</div></footer>
-  <a class="float" href="https://wa.me/27745302232">WhatsApp us</a>
-</body>
-</html>
+<header><div class="wrap nav"><div class="brand"><div class="mark">AB</div><div>A.B Plumbers<small>Gqeberha</small></div></div><a class="btn btn-brass" href="https://wa.me/27745302232">WhatsApp</a></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Ben Kamma · Nelson Mandela Bay</div><h1>Reliable plumbing, close to home.</h1><p class="lead">Burst pipes, leaking geysers, blocked drains and everyday repairs across Gqeberha. Call or WhatsApp A.B Plumbers and get a clear next step.</p><div class="actions"><a class="btn btn-brass" href="tel:+27745302232">Call 074 530 2232</a><a class="btn btn-line" href="https://wa.me/27745302232?text=Hi%20A.B%20Plumbers%2C%20I%20need%20help%20with%20">Request a quote</a></div><div class="trust"><div><b>Local team</b><span>Based in Ben Kamma</span></div><div><b>Clear pricing</b><span>Affordable, no runaround</span></div><div><b>Guaranteed</b><span>100% satisfaction</span></div></div></div></section>
+<section id="services"><div class="wrap"><div class="eyebrow" style="color:var(--brass)">Services</div><h2>What we come out for.</h2><p class="sub">The work homes and small businesses in Nelson Mandela Bay actually need done.</p><div class="services">
+<article class="service"><img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Copper pipes" /><div><h3>Leak detection & repairs</h3><p>Dripping taps, burst pipes and hidden leaks before they damage the house or the water bill.</p></div></article>
+<article class="service"><img src="https://images.pexels.com/photos/7214526/pexels-photo-7214526.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Geyser" /><div><h3>Geysers</h3><p>Repair, replace and install geysers when there is no hot water in the morning.</p></div></article>
+<article class="service"><img src="https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Blocked drain" /><div><h3>Blocked drains</h3><p>Toilets, showers, kitchen sinks and outside drains cleared properly.</p></div></article>
+<article class="service"><img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tap installation" /><div><h3>Installations</h3><p>New taps, toilets, showers, piping, bathroom and kitchen plumbing.</p></div></article>
+</div></div></section>
+<section class="dark"><div class="wrap"><div class="eyebrow">Why A.B Plumbers</div><h2>Straight work. Fair price. A local number.</h2><div class="cols"><article><h3>Based in Ben Kamma</h3><p>You are messaging a Gqeberha plumber, not a national call centre.</p></article><article><h3>Quality without fuss</h3><p>Good workmanship at prices people in the Bay can actually afford.</p></article><article><h3>100% satisfaction</h3><p>If the job is not right, we come back and make it right.</p></article></div><div class="chips"><span class="chip">Ben Kamma</span><span class="chip">Walmer</span><span class="chip">Newton Park</span><span class="chip">Summerstrand</span><span class="chip">Kabega</span><span class="chip">Lorraine</span><span class="chip">Humewood</span><span class="chip">Despatch</span><span class="chip">Kariega</span></div></div></section>
+<section><div class="wrap"><div class="eyebrow" style="color:var(--brass)">On the job</div><h2>Plumbing you can see.</h2><p class="sub">Leaks, geysers, drains and tap work — the jobs A.B Plumbers actually handles in Gqeberha.</p><div class="gallery"><img src="https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Plumber under a sink" /><img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Copper pipes" /><img src="https://images.pexels.com/photos/7214526/pexels-photo-7214526.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Electric geyser" /><img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Tap install" /></div></div></section>
+<section id="contact"><div class="wrap"><div class="eyebrow" style="color:var(--brass)">Contact</div><h2>Need a plumber today?</h2><div class="contact-grid"><div class="panel"><h3>WhatsApp or call</h3><div class="big-num">074 530 2232</div><p>Tell us what is leaking, blocked or broken.</p><div class="actions" style="margin:16px 0 0"><a class="btn btn-brass" href="https://wa.me/27745302232">WhatsApp</a><a class="btn btn-dark" href="tel:+27745302232">Call now</a></div></div><div class="panel"><h3>Where we work</h3><p>Van Wyk Street area, Ben Kamma, Port Elizabeth / Gqeberha, Eastern Cape.</p><ul><li>Homes across Nelson Mandela Bay</li><li>Small business call-outs</li><li>Repairs and new installations</li></ul></div><div class="panel"><h3>How it works</h3><ul><li>Send a photo or short voice note</li><li>We confirm what the job looks like</li><li>We come out and finish it cleanly</li></ul></div></div></div></section>
+<footer><div class="wrap">A.B Plumbers · Gqeberha · 074 530 2232</div></footer>
+<a class="float" href="https://wa.me/27745302232">WhatsApp us</a>
+</body></html>
