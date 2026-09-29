@@ -73,7 +73,7 @@
       <div class="err" id="err">Please add your name, a valid email, a valid SA cell number, your area, and tick the consent box.</div>
       <button class="btn btn-green" type="submit" id="sb"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Send quote request</button>
       <div class="ok" id="okmsg"><b>Thank you, your request has been sent.</b> We will be in touch shortly with a detailed written quote.</div>
-      <div class="err" id="senderr">Sorry, your request could not be sent. Please email us directly at <a href="mailto:essentia360.office@gmail.com"><b>essentia360.office@gmail.com</b></a> or call 068 980 3595.</div>
+      <div class="err" id="senderr">Our form is busy right now. Tap below to send the same request from your email app, or call 068 980 3595.<br><a class="btn btn-green" id="mailfb" href="mailto:essentia360.office@gmail.com" style="margin-top:10px"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Send by email instead</a></div>
     </form>
   </div>
 </section>
@@ -105,7 +105,9 @@
     if(document.getElementById('hp').value)return;
     var btn=document.getElementById('sb'), se=document.getElementById('senderr');
     btn.disabled=true; btn.style.opacity=.6; btn.lastChild.textContent='Sending...'; se.style.display='none';
-    fetch('https://formsubmit.co/ajax/essentia360.office@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    document.getElementById('mailfb').href='mailto:essentia360.office@gmail.com?subject='+encodeURIComponent('Quote request: '+svcs+' - '+v('a'))+'&body='+encodeURIComponent(L.join('\n'));
+    var ctl=window.AbortController?new AbortController():null; setTimeout(function(){if(ctl)ctl.abort()},20000);
+    fetch('https://formsubmit.co/ajax/essentia360.office@gmail.com',{signal:ctl?ctl.signal:undefined,method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({_subject:'New quote request: '+svcs+' - '+v('a'),_replyto:v('e'),_template:'table',_captcha:'false',
         Service:svcs,Name:v('n'),Email:v('e'),Cell:v('p'),Area:v('a'),Property:v('t'),Job_description:v('d')||'(not provided)',Consent:'Yes (POPIA)'})})
     .then(function(r){return r.json()})
