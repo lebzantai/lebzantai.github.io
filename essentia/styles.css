@@ -247,3 +247,9 @@ header{border-bottom-color:#5C7C99}
 @media (max-width:520px){.tiles{grid-template-columns:1fr}.tile{aspect-ratio:16/9}}
 .card .ic{color:#12314F}
 .hero p{max-width:600px}
+.fchip{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:10px;padding:6px 12px}
+.fchip b{color:#12314F!important;font-size:1.05rem}
+.area-grid.four{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){.area-grid.four{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.area-grid.four{grid-template-columns:1fr}}
+.phead[style*="bakkie-real"]{background-position:center 28%}
