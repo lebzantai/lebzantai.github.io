@@ -56,6 +56,8 @@
         <label><input type="checkbox" value="Building">Building</label>
         <label><input type="checkbox" value="Plumbing">Plumbing</label>
         <label><input type="checkbox" value="Carpentry">Carpentry</label>
+        <label><input type="checkbox" value="Salvage Management">Salvage Management</label>
+        <label><input type="checkbox" value="Non-Motor Salvage (Insurance)">Non-Motor Salvage (Insurance)</label>
       </div>
       <div class="row">
         <div><label for="n">Full name</label><input id="n" autocomplete="name"></div>
@@ -65,9 +67,9 @@
         <div><label for="p">Cell number</label><input id="p" type="tel" inputmode="tel" autocomplete="tel" placeholder="082 123 4567"></div>
         <div><label for="a">Suburb / town</label><input id="a" placeholder="e.g. Roodepoort"></div>
       </div>
-      <label for="t">Property type</label><select id="t"><option>Home</option><option>Business</option><option>Managed property / complex</option></select>
+      <label for="t">Property type</label><select id="t"><option>Home</option><option>Business</option><option>Managed property / complex</option><option>Insurance claim / salvage file</option></select>
       <label for="d">Describe the job</label>
-      <textarea id="d" placeholder="e.g. Roof leaking over the lounge, and gutters need replacing"></textarea>
+      <textarea id="d" placeholder="e.g. Roof leaking over the lounge, or salvage file: claim number, asset details and location"></textarea>
       <label class="consent"><input type="checkbox" id="ok"> I agree that Essentia360 may use these details to contact me about my request, in line with POPIA.</label>
       <div class="err" id="err">Please add your name, a valid email, a valid SA cell number, your area, and tick the consent box.</div>
       <button class="btn btn-green" type="submit" id="sb"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Send quote request</button>
