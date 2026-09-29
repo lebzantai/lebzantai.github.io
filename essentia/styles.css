@@ -244,3 +244,6 @@ header{border-bottom-color:#5C7C99}
 .cards4{grid-template-columns:repeat(4,1fr)}
 @media (max-width:900px){.cards4{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.cards4{grid-template-columns:1fr}}
+@media (max-width:520px){.tiles{grid-template-columns:1fr}.tile{aspect-ratio:16/9}}
+.card .ic{color:#12314F}
+.hero p{max-width:600px}
