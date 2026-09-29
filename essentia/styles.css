@@ -288,3 +288,35 @@ header{border-bottom-color:#5C7C99}
 .route h3{font-size:1.1rem;margin-bottom:.35rem}
 .route p{color:var(--muted);font-size:.92rem}
 @media (max-width:860px){.routes{grid-template-columns:1fr}.routes::before{display:none}.route::before{display:none}.best-route::before{display:none}}
+
+/* salvage: phases */
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.phase{background:#fff;border:1px solid var(--line);border-top:4px solid #5C7C99;border-radius:12px;padding:22px 24px}
+.phase small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#5C7C99}
+.phase h3{font-size:1.15rem;margin:.25rem 0 .9rem}
+.phase ol{list-style:none}
+.phase li{display:flex;align-items:center;gap:12px;padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.94rem}
+.phase li:last-child{border-bottom:0}
+.phase span{width:30px;height:30px;flex:none;border-radius:50%;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:.76rem;font-weight:800}
+@media (max-width:900px){.phases{grid-template-columns:1fr}}
+
+/* salvage: control & economics */
+.ctrl{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.ctrl-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.ctrl-box small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#5C7C99}
+.ctrl-box h3{font-size:1.12rem;margin:.3rem 0 .9rem}
+.ctrl-box .checks{margin:0}
+.bridge{display:flex;align-items:stretch;gap:10px;margin-top:4px;flex-wrap:wrap}
+.bridge div{flex:1 1 0;min-width:110px;background:var(--green-soft);border-radius:10px;padding:14px 12px;text-align:center}
+.bridge div.net{background:var(--green)}
+.bridge b{display:block;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:800}
+.bridge div.net b{color:#fff}
+.bridge span{display:block;font-size:.8rem;color:var(--muted);margin-top:.3rem;line-height:1.35}
+.bridge div.net span{color:#cfe0ee}
+.bridge em{align-self:center;font-style:normal;font-weight:800;color:#5C7C99;font-size:1.2rem}
+@media (max-width:860px){.ctrl{grid-template-columns:1fr}}
+.audit{margin-top:18px;background:var(--green);border-radius:12px;padding:18px 24px}
+.audit small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#b7cdde}
+.audit p{color:#fff;margin-top:.3rem;font-size:.95rem}
+.ctrl-box .checks li::before{content:"\2713";background:none;border:0;width:auto;height:auto;top:0;color:var(--green);font-weight:800;font-size:.95rem}
+.ctrl-box .checks li{padding-left:1.4rem}
