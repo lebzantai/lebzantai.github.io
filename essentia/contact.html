@@ -12,17 +12,18 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="canonical" href="https://essentia360.co.za/contact.html">
+<meta property="og:url" content="https://essentia360.co.za/contact.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Essentia360">
 <meta property="og:title" content="Contact & Quotes | Essentia360">
 <meta property="og:description" content="Request a quote from Essentia360 by email.">
-<meta property="og:image" content="https://essentia360-sample.vercel.app/img/og.jpg">
+<meta property="og:image" content="https://essentia360.co.za/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<div class="pbar" id="pbar"><div class="wrap"><span><b>Website preview</b> prepared for Essentia360. Approve today and it goes live on your own domain by <b>Friday 2 October</b>.</span><a class="pbtn" href="mailto:lebo@symmetrasystems.org?subject=Essentia360%20website%20-%20approved&amp;body=Hi%20Lebo%2C%0A%0AWe%20approve%20the%20Essentia360%20website%20(once-off%20R4%2C500).%0A%0A%5B%20%5D%20Add%20optional%20maintenance%20-%20R400%20per%20month%0A%0APlease%20send%20the%20invoice%20and%20next%20steps.%0A%0AKind%20regards">Approve &amp; go live</a><button class="px" aria-label="Hide preview bar" onclick="document.getElementById('pbar').remove()">&times;</button></div></div>
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="Essentia360 home"><img src="img/icon-navy.png" alt="" width="40" height="40"><b>ESSENTIA<span style="color:#355D7B">360</span></b></a>
@@ -47,7 +48,8 @@
     </div>
     <form id="qf" novalidate>
       <h2>Quote request</h2>
-      <p>Your request opens as an email to essentia360.office@gmail.com, ready to send.</p>
+      <p>Send us the details below and we will respond with a detailed written quote.</p>
+      <input type="text" name="_honey" id="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <label>What do you need?</label>
       <div class="chips" id="svcChips">
         <label><input type="checkbox" value="Roofing">Roofing</label>
@@ -68,8 +70,9 @@
       <textarea id="d" placeholder="e.g. Roof leaking over the lounge, and gutters need replacing"></textarea>
       <label class="consent"><input type="checkbox" id="ok"> I agree that Essentia360 may use these details to contact me about my request, in line with POPIA.</label>
       <div class="err" id="err">Please add your name, a valid email, a valid SA cell number, your area, and tick the consent box.</div>
-      <button class="btn btn-green" type="submit"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Send quote request by email</button>
-      <div class="ok" id="okmsg">Your email app should now be open with your request filled in. Just press send. If nothing opened, email us directly at <b>essentia360.office@gmail.com</b>.</div>
+      <button class="btn btn-green" type="submit" id="sb"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Send quote request</button>
+      <div class="ok" id="okmsg"><b>Thank you, your request has been sent.</b> We will be in touch shortly with a detailed written quote.</div>
+      <div class="err" id="senderr">Sorry, your request could not be sent. Please email us directly at <a href="mailto:essentia360.office@gmail.com"><b>essentia360.office@gmail.com</b></a> or call 068 980 3595.</div>
     </form>
   </div>
 </section>
@@ -98,8 +101,15 @@
     err.style.display='none';
     var svcs=[].map.call(document.querySelectorAll('#svcChips input:checked'),function(i){return i.value}).join(', ')||'Not specified';
     var L=['Service: '+svcs,'Name: '+v('n'),'Email: '+v('e'),'Cell: '+v('p'),'Area: '+v('a'),'Property: '+v('t'),'','Job description:',v('d')||'(not provided)'];
-    location.href='mailto:essentia360.office@gmail.com?subject='+encodeURIComponent('Quote request: '+svcs+' - '+v('a'))+'&body='+encodeURIComponent(L.join('\n'));
-    document.getElementById('okmsg').style.display='block';
+    if(document.getElementById('hp').value)return;
+    var btn=document.getElementById('sb'), se=document.getElementById('senderr');
+    btn.disabled=true; btn.style.opacity=.6; btn.lastChild.textContent='Sending...'; se.style.display='none';
+    fetch('https://formsubmit.co/ajax/essentia360.office@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({_subject:'New quote request: '+svcs+' - '+v('a'),_replyto:v('e'),_template:'table',_captcha:'false',
+        Service:svcs,Name:v('n'),Email:v('e'),Cell:v('p'),Area:v('a'),Property:v('t'),Job_description:v('d')||'(not provided)',Consent:'Yes (POPIA)'})})
+    .then(function(r){return r.json()})
+    .then(function(j){ if(j && (j.success===true||j.success==='true')){document.getElementById('qf').querySelectorAll('input,select,textarea,button').forEach(function(x){x.disabled=true});document.getElementById('okmsg').style.display='block';btn.lastChild.textContent='Sent';} else {throw new Error(j&&j.message)} })
+    .catch(function(){se.style.display='block';btn.disabled=false;btn.style.opacity=1;btn.lastChild.textContent='Send quote request';});
   });
 })();
 </script>
