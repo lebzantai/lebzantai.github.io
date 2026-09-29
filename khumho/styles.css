@@ -208,3 +208,18 @@ footer a{text-decoration:none}footer a:hover{color:var(--gold)}
 .legal a{color:var(--gold)}
 @media (max-width:860px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.fgrid{grid-template-columns:1fr}}
+
+/* preview / approval bar */
+.pbar{background:#141c10;color:#e6ebe1;font-size:.86rem}
+.pbar .wrap{display:flex;align-items:center;gap:14px;min-height:46px;padding-top:7px;padding-bottom:7px}
+.pbar span{flex:1}
+.pbar b{color:#fff}
+.pbtn{background:var(--gold);color:#1f1a0b;font-weight:800;text-decoration:none;padding:.45rem .95rem;border-radius:999px;white-space:nowrap;font-size:.82rem}
+.pbtn:hover{background:#d4b56c}
+.px{background:none;border:0;color:#9aa592;font-size:1.4rem;line-height:1;cursor:pointer;padding:0 4px}
+@media (max-width:640px){.pbar .wrap{flex-wrap:wrap;gap:8px 12px}.pbar span{flex-basis:calc(100% - 50px);font-size:.8rem}.pbtn{order:3}}
+.brand img{width:54px;height:32px;object-fit:contain}
+.flogo{background:#fff;border-radius:6px;padding:4px 6px;display:inline-flex}
+.flogo img{width:40px;height:24px;object-fit:contain}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:2rem}
+.badges span{font-size:.76rem;font-weight:700;letter-spacing:.06em;padding:.42rem .8rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(255,255,255,.07);color:#fff}
