@@ -320,3 +320,6 @@ header{border-bottom-color:#5C7C99}
 .audit p{color:#fff;margin-top:.3rem;font-size:.95rem}
 .ctrl-box .checks li::before{content:"\2713";background:none;border:0;width:auto;height:auto;top:0;color:var(--green);font-weight:800;font-size:.95rem}
 .ctrl-box .checks li{padding-left:1.4rem}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.slidefig{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#dfe4ea;line-height:0}
+.slidefig img{width:100%;height:auto}
