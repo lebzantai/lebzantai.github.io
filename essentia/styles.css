@@ -530,3 +530,7 @@ footer>.wrap>.fgrid>div>p{line-height:1.65;color:#93a8ba}
 .lead-box{align-items:stretch}
 .lead-box>.pic{aspect-ratio:auto!important;min-height:100%}
 .lead-box>.pic img{height:100%;min-height:320px}
+.tiles{grid-template-columns:repeat(5,1fr);gap:16px}
+@media (max-width:1100px){.tiles{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){.tiles{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.tiles{grid-template-columns:1fr}}
