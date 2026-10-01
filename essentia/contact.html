@@ -107,11 +107,17 @@
     btn.disabled=true; btn.style.opacity=.6; btn.lastChild.textContent='Sending...'; se.style.display='none';
     document.getElementById('mailfb').href='mailto:essentia360.office@gmail.com?subject='+encodeURIComponent('Quote request: '+svcs+' - '+v('a'))+'&body='+encodeURIComponent(L.join('\n'));
     var ctl=window.AbortController?new AbortController():null; setTimeout(function(){if(ctl)ctl.abort()},20000);
-    fetch('https://api.web3forms.com/submit',{signal:ctl?ctl.signal:undefined,method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    var done=function(){document.getElementById('qf').querySelectorAll('input,select,textarea,button').forEach(function(x){x.disabled=true});document.getElementById('okmsg').style.display='block';btn.lastChild.textContent='Sent';};
+    var viaW3F=function(){return fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({access_key:'d345a23e-36c1-4288-848a-19b5a2ca1276',subject:'New quote request: '+svcs+' - '+v('a'),from_name:'Essentia360 Website',replyto:v('e'),
         Service:svcs,Name:v('n'),Email:v('e'),Cell:v('p'),Area:v('a'),Property:v('t'),Job_description:v('d')||'(not provided)',Consent:'Yes (POPIA)'})})
+      .then(function(r){return r.json()}).then(function(j){if(!(j&&(j.success===true||j.success==='true')))throw new Error('w3f')})};
+    fetch('/api/quote',{signal:ctl?ctl.signal:undefined,method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({service:svcs,name:v('n'),email:v('e'),cell:v('p'),area:v('a'),property:v('t'),job:v('d'),hp:document.getElementById('hp').value})})
     .then(function(r){return r.json()})
-    .then(function(j){ if(j && (j.success===true||j.success==='true')){document.getElementById('qf').querySelectorAll('input,select,textarea,button').forEach(function(x){x.disabled=true});document.getElementById('okmsg').style.display='block';btn.lastChild.textContent='Sent';} else {throw new Error(j&&j.message)} })
+    .then(function(j){if(!(j&&j.success===true))throw new Error('api')})
+    .catch(function(){return viaW3F()})
+    .then(done)
     .catch(function(){se.style.display='block';btn.disabled=false;btn.style.opacity=1;btn.lastChild.textContent='Send quote request';});
   });
 })();
