@@ -44,10 +44,10 @@ module.exports = async (req, res) => {
   }
   try {
     await send({
-      from: FROM, to: [d.email], reply_to: OFFICE,
+      from: FROM, to: [d.email],
       subject: 'We received your quote request - Essentia360',
-      html: '<div style="font-family:Arial,sans-serif;font-size:14px;line-height:1.5"><p>Hi ' + esc(d.name.split(' ')[0]) + ',</p><p>Thank you, your request has been received. We will be in touch to arrange an appointment for a site assessment.</p><p>Here is what you sent us:</p>' + table + '<p>Kind regards,<br>Essentia360<br>essentia360.co.za</p></div>',
-      text: 'Hi ' + d.name.split(' ')[0] + ',\n\nThank you, your request has been received. We will be in touch to arrange an appointment for a site assessment.\n\nHere is what you sent us:\n' + text + '\n\nKind regards,\nEssentia360\nessentia360.co.za'
+      html: '<div style="font-family:Arial,sans-serif;font-size:14px;line-height:1.5"><p>Hi ' + esc(d.name.split(' ')[0]) + ',</p><p>Thank you, your request has been received. We will be in touch to arrange an appointment for a site assessment.</p><p>Here is what you sent us:</p>' + table + '<p>If you need to reach us, email essentia360.office@gmail.com.</p><p>Kind regards,<br>Essentia360<br>essentia360.co.za</p></div>',
+      text: 'Hi ' + d.name.split(' ')[0] + ',\n\nThank you, your request has been received. We will be in touch to arrange an appointment for a site assessment.\n\nHere is what you sent us:\n' + text + '\n\nIf you need to reach us, email essentia360.office@gmail.com.\n\nKind regards,\nEssentia360\nessentia360.co.za'
     });
   } catch (e) { console.error('confirm ' + e.message); }
   return res.status(200).json({ success: true });
