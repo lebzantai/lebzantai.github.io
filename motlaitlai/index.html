@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Motlaitlai Construction & Projects</title>
+  <meta name="description" content="Motlaitlai (Pty) Ltd. 3D building plans, civil and building construction, renovations and maintenance. NHBRC and cidb registered. Mamelodi West, Pretoria." />
+  <meta property="og:title" content="Motlaitlai Construction & Projects" />
+  <meta property="og:description" content="Plans, structure and handover. NHBRC and cidb registered." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #101418;
+      --ink-2: #1c232b;
+      --stone: #f3efe8;
+      --paper: #f7f4ef;
+      --brass: #b8894a;
+      --brass-2: #e4c48a;
+      --muted: #5e675f;
+      --line: rgba(16,20,24,0.1);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Outfit, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .topnote {
+      background: var(--ink);
+      color: #d9d1c4;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 8px 14px;
+    }
+    .topnote b { color: var(--brass-2); font-weight: 500; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(247,244,239,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .monogram {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--ink);
+      display: grid;
+      place-items: center;
+      font-family: Fraunces, serif;
+      font-size: 18px;
+    }
+    .brand strong {
+      display: block;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      font-size: 13px;
+    }
+    .brand span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .links { display: none; gap: 22px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ink);
+      color: #f7f4ef;
+      padding: 12px 18px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 0;
+      cursor: pointer;
+    }
+    .btn.brass { background: var(--brass); color: #1a1208; }
+    .btn.line { background: transparent; color: #f7f4ef; border: 1px solid rgba(247,244,239,0.45); }
+    .hero {
+      min-height: 92vh;
+      background: #111 url("hero.jpg") center 40%/cover no-repeat;
+      color: #f7f4ef;
+      display: grid;
+      align-items: end;
+      position: relative;
+    }
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,12,14,0.15) 0%, rgba(10,12,14,0.28) 40%, rgba(10,12,14,0.82) 100%);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 80px 22px 36px;
+      width: 100%;
+    }
+    .eyebrow {
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: var(--brass-2);
+      margin-bottom: 14px;
+    }
+    h1, h2, h3 { font-family: Fraunces, serif; font-weight: 500; letter-spacing: -0.03em; margin: 0; }
+    h1 { font-size: clamp(48px, 9vw, 92px); line-height: 0.92; max-width: 11ch; }
+    .lede { max-width: 46ch; font-size: 18px; font-weight: 300; color: #efe8de; margin: 18px 0 26px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ledger {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid rgba(247,244,239,0.2);
+    }
+    .ledger div { padding: 14px 12px 4px 0; }
+    .ledger b { display: block; font-weight: 500; font-size: 14px; }
+    .ledger span { color: #d9d0c4; font-size: 12px; letter-spacing: 0.04em; }
+    section { padding: 76px 22px; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    h2 { font-size: clamp(36px, 5vw, 60px); line-height: 0.98; }
+    .intro { max-width: 46ch; color: var(--muted); margin: 12px 0 0; }
+    .services { margin-top: 36px; display: grid; gap: 18px; }
+    .service {
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+    .service img { height: 220px; width: 100%; object-fit: cover; }
+    .service .copy { padding: 22px; }
+    .num { color: var(--brass); letter-spacing: 0.16em; font-size: 12px; }
+    .service h3 { font-size: 32px; margin: 8px 0; }
+    .service p { margin: 0; color: var(--muted); }
+    .about {
+      display: grid;
+      gap: 28px;
+    }
+    .about img { width: 100%; height: 320px; object-fit: cover; }
+    .facts { margin: 22px 0 0; padding: 0; list-style: none; }
+    .facts li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 15px;
+    }
+    .facts span { color: var(--muted); }
+    .band { background: var(--ink); color: #f3eee6; }
+    .regs { display: grid; gap: 1px; background: rgba(255,255,255,0.08); margin-top: 28px; }
+    .reg { background: var(--ink-2); padding: 20px; }
+    .reg span { display: block; color: var(--brass-2); letter-spacing: 0.16em; text-transform: uppercase; font-size: 11px; }
+    .reg b { display: block; margin-top: 8px; font-weight: 500; font-size: 20px; }
+    .steps { display: grid; gap: 14px; margin-top: 28px; }
+    .step { padding-top: 14px; border-top: 1px solid var(--line); }
+    .step b { display: block; font-family: Fraunces, serif; font-size: 26px; font-weight: 500; }
+    .contact {
+      display: grid;
+      gap: 18px;
+    }
+    .panel { background: #fff; border: 1px solid var(--line); padding: 24px; }
+    .panel a { border-bottom: 1px solid var(--brass); }
+    label { display: block; margin: 14px 0 6px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+    input, select, textarea {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: transparent;
+      font: inherit;
+      padding: 10px 0;
+      border-radius: 0;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    .fine { font-size: 13px; color: var(--muted); }
+    footer { background: #0c0f12; color: #cfc6ba; padding: 36px 22px 110px; font-size: 13px; }
+    footer .wrap { display: grid; gap: 6px; }
+    .dock {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 40;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 8px;
+    }
+    .dock a { text-align: center; padding: 14px 10px; }
+    @media (min-width: 860px) {
+      .links { display: flex; }
+      .ledger { grid-template-columns: repeat(4, 1fr); }
+      .services { grid-template-columns: 1.15fr 0.9fr 0.9fr; }
+      .service:first-child img { height: 100%; min-height: 420px; }
+      .service:first-child { grid-row: span 1; }
+      .about { grid-template-columns: 1.05fr 0.95fr; align-items: center; }
+      .about img { height: 520px; }
+      .regs, .steps { grid-template-columns: repeat(4, 1fr); }
+      .contact { grid-template-columns: 0.85fr 1.15fr; }
+      .dock { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topnote">Sample preview by <b>Symmetra Systems</b> · photographs are illustrative</div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top">
+        <div class="monogram">M</div>
+        <div>
+          <strong>MOTLAITLAI</strong>
+          <span>Construction & Projects</span>
+        </div>
+      </a>
+      <nav class="links">
+        <a href="#work">Services</a>
+        <a href="#company">Company</a>
+        <a href="#register">Register</a>
+        <a href="#quote">Quote</a>
+      </nav>
+      <a class="btn" href="#quote">Request a quote</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Motlaitlai (Pty) Ltd · Pretoria</div>
+        <h1>From the plan to the last brick.</h1>
+        <p class="lede">3D building plans, civil and building construction, renovations and maintenance. Registered with the NHBRC and the cidb, led by Vincent Motlaitlai.</p>
+        <div class="actions">
+          <a class="btn brass" href="https://wa.me/27718254858?text=Hi%20Vincent%2C%20I%20would%20like%20a%20quote%20from%20Motlaitlai%20Construction.">WhatsApp Vincent</a>
+          <a class="btn line" href="tel:+27718254858">071 825 4858</a>
+        </div>
+        <div class="ledger">
+          <div><b>NHBRC</b><span>3000195612</span></div>
+          <div><b>cidb</b><span>CRS 10145184</span></div>
+          <div><b>SARS</b><span>9222852239</span></div>
+          <div><b>CSD</b><span>Supplier database</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="eyebrow" style="color:var(--brass)">Scope of work</div>
+        <h2>What the company is set up to do.</h2>
+        <p class="intro">Taken from the company profile. A written scope and price come after the site is seen.</p>
+        <div class="services">
+          <article class="service">
+            <img src="plans.jpg" alt="Plans, hard hat and tape on a site table" />
+            <div class="copy">
+              <div class="num">01</div>
+              <h3>3D building plans</h3>
+              <p>House plans and three-dimensional views before construction starts, ready to price and to submit.</p>
+            </div>
+          </article>
+          <article class="service">
+            <img src="civil.jpg" alt="Foundation steel and brickwork on site" />
+            <div class="copy">
+              <div class="num">02</div>
+              <h3>Civil and building</h3>
+              <p>Foundations, brickwork, general construction and civil work, run as one job from set-out to structure.</p>
+            </div>
+          </article>
+          <article class="service">
+            <img src="home.jpg" alt="Completed face-brick house" />
+            <div class="copy">
+              <div class="num">03</div>
+              <h3>Renovations and maintenance</h3>
+              <p>Alterations, repairs and upkeep for an existing house or small building.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" style="background:#fff">
+      <div class="wrap about">
+        <img src="hero.jpg" alt="Residential structure at golden hour" />
+        <div>
+          <div class="eyebrow" style="color:var(--brass)">The practice</div>
+          <h2>A director you can call.</h2>
+          <p class="intro">Motlaitlai (Pty) Ltd Construction & Projects is led by Vincent Motlaitlai, Managing Director. The work covers plans, civil and building construction, renovations and maintenance.</p>
+          <ul class="facts">
+            <li>Managing director <span>Vincent Motlaitlai</span></li>
+            <li>Base <span>Mamelodi West, Pretoria</span></li>
+            <li>Hours <span>Mon–Fri 08:00–17:00</span></li>
+            <li>Saturday <span>10:00–15:00</span></li>
+          </ul>
+          <p class="fine">Address from a public listing that matches the company phone and domain. Confirm before it is printed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="register">
+      <div class="wrap">
+        <div class="eyebrow">On the register</div>
+        <h2>Numbers a client can check.</h2>
+        <div class="regs">
+          <div class="reg"><span>NHBRC</span><b>3000195612</b></div>
+          <div class="reg"><span>cidb CRS</span><b>10145184</b></div>
+          <div class="reg"><span>SARS tax</span><b>9222852239</b></div>
+          <div class="reg"><span>Procurement</span><b>Central Supplier Database</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow" style="color:var(--brass)">How a job starts</div>
+        <h2>Clear before anyone is on site.</h2>
+        <div class="steps">
+          <div class="step"><b>01</b>Call or WhatsApp with the stand and what you want built.</div>
+          <div class="step"><b>02</b>Site visit, measure, and confirm the actual scope.</div>
+          <div class="step"><b>03</b>Written quote before the work is booked.</div>
+          <div class="step"><b>04</b>Plans, construction or renovation, then handover.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" style="background:#fff">
+      <div class="wrap contact">
+        <div class="panel">
+          <div class="eyebrow" style="color:var(--brass)">Contact</div>
+          <h2 style="font-size:44px">Speak to Vincent.</h2>
+          <p><a href="tel:+27718254858">071 825 4858</a><br />
+            <a href="tel:+27659974271">065 997 4271</a><br />
+            <a href="tel:+27655135020">065 513 5020</a><br />
+            <a href="tel:+27698342585">069 834 2585</a><br />
+            <a href="tel:+27838348253">083 834 8253</a></p>
+          <p><a href="mailto:motlaitlaiprojects@gmail.com">motlaitlaiprojects@gmail.com</a></p>
+          <p>289 Block B Kekana Street<br />Mamelodi West, Pretoria, 0122</p>
+        </div>
+        <form class="panel" id="quoteform">
+          <h3 style="font-size:36px">Request a quote</h3>
+          <label for="name">Name</label>
+          <input id="name" required placeholder="Your name" />
+          <label for="phone">Phone</label>
+          <input id="phone" required placeholder="Your number" />
+          <label for="job">Work required</label>
+          <select id="job">
+            <option>3D building plans</option>
+            <option>New build</option>
+            <option>Civil / foundations</option>
+            <option>Renovation</option>
+            <option>Maintenance</option>
+          </select>
+          <label for="msg">Site and details</label>
+          <textarea id="msg" placeholder="Area, stand number, what you want built"></textarea>
+          <button class="btn" style="margin-top:18px" type="submit">Send on WhatsApp</button>
+          <p class="fine">Opens WhatsApp to the managing director with your details filled in.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Motlaitlai (Pty) Ltd · Construction & Projects</strong>
+      <span>Sample website prepared for review by Symmetra Systems. Not the live company site.</span>
+      <span>NHBRC 3000195612 · cidb CRS 10145184 · SARS 9222852239</span>
+    </div>
+  </footer>
+  <div class="dock">
+    <a class="btn line" style="background:#1c232b" href="tel:+27718254858">Call</a>
+    <a class="btn brass" href="https://wa.me/27718254858?text=Hi%20Vincent%2C%20I%20would%20like%20a%20quote%20from%20Motlaitlai%20Construction.">WhatsApp</a>
+  </div>
+  <script>
+    document.getElementById("quoteform").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var text = "Hi Vincent, quote request.%0AName: " + encodeURIComponent(document.getElementById("name").value.trim())
+        + "%0APhone: " + encodeURIComponent(document.getElementById("phone").value.trim())
+        + "%0AJob: " + encodeURIComponent(document.getElementById("job").value)
+        + "%0ADetails: " + encodeURIComponent(document.getElementById("msg").value.trim());
+      window.location.href = "https://wa.me/27718254858?text=" + text;
+    });
+  </script>
+</body>
+</html>
