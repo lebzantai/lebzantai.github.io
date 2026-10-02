@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Motlaitlai Construction & Projects</title>
   <meta name="description" content="Motlaitlai Construction & Projects, established 2017. Architecture, construction, supply and brick manufacturing. NHBRC, CIDB, MBSA and SACAP." />
-  <meta name="description" content="Motlaitlai Construction & Projects, established 2017. Architecture, construction, supply and brick manufacturing. NHBRC, CIDB, MBSA and SACAP." />
   <link rel="icon" href="logo-mark.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -21,9 +20,29 @@
     .nav { max-width:1180px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .brand { display:flex; align-items:center; gap:12px; }
     .brand img { width:40px; height:40px; object-fit:contain; }
-    .hero { min-height:88vh; background:#111 url("hero.jpg") center 35%/cover no-repeat; color:#f6f1e8; display:grid; align-items:end; position:relative; }
+    .hero { min-height:88vh; background:#111 url("hero.jpg") center 35%/cover no-repeat; color:#f6f1e8; display:grid; align-items:end; position:relative; overflow:hidden; }
+    .hero:before { content:""; position:absolute; inset:-4%; background:url("hero.jpg") center 35%/cover no-repeat; animation:drift 28s ease-in-out infinite alternate; }
     .hero:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,14,.18), rgba(10,12,14,.78)); }
     .hero-inner { position:relative; z-index:1; max-width:1180px; margin:0 auto; padding:72px 20px 40px; width:100%; }
+    .hero-inner > * { animation:rise .9s ease both; }
+    .hero-inner > :nth-child(2) { animation-delay:.12s; }
+    .hero-inner > :nth-child(3) { animation-delay:.22s; }
+    .hero-inner > :nth-child(4) { animation-delay:.32s; }
+    .hero-inner > :nth-child(5) { animation-delay:.42s; }
+    @keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+    @keyframes drift { from { transform:scale(1.04) translate3d(0,0,0); } to { transform:scale(1.1) translate3d(-1.5%,-1%,0); } }
+    .btn, .links a, .clients span, .reg, .panel { transition:transform .35s ease, background .35s ease, color .35s ease, border-color .35s ease; }
+    .btn:hover { transform:translateY(-2px); }
+    .links a { position:relative; }
+    .links a:after { content:""; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:var(--brass); transform:scaleX(0); transform-origin:left; transition:transform .35s ease; }
+    .links a:hover:after { transform:scaleX(1); }
+    .reel figure { transition:transform .45s ease; }
+    .reel figure:hover { transform:translateY(-4px); }
+    .reel img { transition:transform .6s ease; }
+    .reel figure:hover img { transform:scale(1.04); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation:none !important; transition:none !important; }
+    }
     .mark-panel { background:#fff; border:1px solid var(--line); padding:28px 22px; display:grid; justify-items:center; }
     .mark-panel img { width:min(220px, 62vw); height:auto; }
     .foot img { width:72px; height:auto; background:#fff; padding:6px; }
@@ -48,7 +67,7 @@
     .reel { margin-top:28px; overflow:hidden; }
     .reel-track { display:flex; gap:12px; width:max-content; animation:slide 42s linear infinite; }
     .reel:hover .reel-track { animation-play-state:paused; }
-    .reel figure { margin:0; width:280px; flex:none; background:#111; }
+    .reel figure { margin:0; width:280px; flex:none; background:#111; overflow:hidden; }
     .reel img { width:280px; height:190px; object-fit:cover; }
     .reel figcaption { padding:10px 12px 12px; color:#5f655f; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#fff; }
     @keyframes slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
