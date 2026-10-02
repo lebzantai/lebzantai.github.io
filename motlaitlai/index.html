@@ -47,9 +47,8 @@
     .card, .reg, .clients span { background:#fff; border:1px solid var(--line); }
     .gallery { display:grid; gap:10px; margin-top:28px; }
     .gallery figure { margin:0; background:#111; position:relative; overflow:hidden; }
-    .gallery img { width:100%; height:240px; object-fit:cover; }
-    .gallery figcaption { position:absolute; left:0; right:0; bottom:0; padding:14px 16px; color:#f6f1e8; background:linear-gradient(transparent, rgba(8,10,12,.75)); font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
-    .feature img { height:420px; }
+    .gallery img { width:100%; height:210px; object-fit:cover; }
+    .feature img { height:210px; }
     .card div, .reg { padding:18px; }
     .card h3 { font-size:28px; }
     .card p, .reg span { color:var(--muted); margin:6px 0 0; }
@@ -82,9 +81,8 @@
     .dock a { text-align:center; padding:14px; }
     @media (min-width:860px) {
       .links { display:flex; }
-      .gallery { grid-template-columns:1.4fr 1fr; }
-      .feature { grid-row:span 2; }
-      .feature img, .gallery img { height:100%; min-height:280px; }
+      .gallery { grid-template-columns:1fr 1fr; }
+      .gallery img { height:240px; }
       .about { grid-template-columns:.7fr 1.3fr; }
       .contact { grid-template-columns:.8fr 1.2fr; }
       .dock { display:none; }
