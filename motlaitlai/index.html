@@ -45,7 +45,11 @@
     .intro { max-width:48ch; color:var(--muted); margin:12px 0 0; }
     .grid4, .services, .regs, .clients { display:grid; gap:12px; margin-top:28px; }
     .card, .reg, .clients span { background:#fff; border:1px solid var(--line); }
-    .card img { height:190px; width:100%; object-fit:cover; }
+    .gallery { display:grid; gap:10px; margin-top:28px; }
+    .gallery figure { margin:0; background:#111; position:relative; overflow:hidden; }
+    .gallery img { width:100%; height:240px; object-fit:cover; }
+    .gallery figcaption { position:absolute; left:0; right:0; bottom:0; padding:14px 16px; color:#f6f1e8; background:linear-gradient(transparent, rgba(8,10,12,.75)); font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
+    .feature img { height:420px; }
     .card div, .reg { padding:18px; }
     .card h3 { font-size:28px; }
     .card p, .reg span { color:var(--muted); margin:6px 0 0; }
@@ -78,7 +82,9 @@
     .dock a { text-align:center; padding:14px; }
     @media (min-width:860px) {
       .links { display:flex; }
-      .services, .regs, .clients { grid-template-columns:repeat(4,1fr); }
+      .gallery { grid-template-columns:1.4fr 1fr; }
+      .feature { grid-row:span 2; }
+      .feature img, .gallery img { height:100%; min-height:280px; }
       .about { grid-template-columns:.7fr 1.3fr; }
       .contact { grid-template-columns:.8fr 1.2fr; }
       .dock { display:none; }
@@ -121,26 +127,20 @@
     </section>
     <section id="work">
       <div class="wrap">
-        <div class="eyebrow">Disciplines</div>
-        <h2>Four lines of work. One company.</h2>
-        <p class="intro">Taken from the company profile. A written scope comes after the site is seen.</p>
-        <div class="services">
-          <article class="card"><img src="plans.jpg" alt="3D house design by Motlaitlai" /><div><h3>Architecture</h3><p>3D building plans and architectural design before a brick is laid.</p></div></article>
-          <article class="card"><img src="civil.jpg" alt="Civil works on the Heidelberg RDP project" /><div><h3>Construction</h3><p>Civil and building work, including the Heidelberg RDP project.</p></div></article>
-          <article class="card"><img src="bricks.jpg" alt="Concrete blocks on site" /><div><h3>Brick manufacturing</h3><p>Blocks made and laid out for the build.</p></div></article>
-          <article class="card"><img src="retail.jpg" alt="Retail fit-out counter" /><div><h3>Retail fit-out</h3><p>Shop and counter work for retail clients, including a KFC fit-out.</p></div></article>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="wrap">
         <div class="eyebrow">Selected work</div>
-        <h2>Plans, sites and finished houses.</h2>
-        <div class="services">
-          <article class="card"><img src="home.jpg" alt="Completed house" /><div><h3>Completed house</h3><p>A finished residential build.</p></div></article>
-          <article class="card"><img src="garden.jpg" alt="Completed house and garden" /><div><h3>Handover</h3><p>March 2025. House, garden and boundary complete.</p></div></article>
-          <article class="card"><img src="rdp.jpg" alt="Heidelberg RDP house" /><div><h3>Heidelberg RDP</h3><p>Housing units with solar geysers.</p></div></article>
-          <article class="card"><img src="layout.jpg" alt="Township layout" /><div><h3>Layout</h3><p>Stand layout prepared by the practice.</p></div></article>
+        <h2>The pictures they sent.</h2>
+        <p class="intro">Finished houses, 3D plans, civil work and a retail fit-out. The weaker site shots were left out.</p>
+        <div class="gallery">
+          <figure class="feature"><img src="garden.jpg" alt="Completed house and garden" /><figcaption>Handover · March 2025</figcaption></figure>
+          <figure><img src="plans.jpg" alt="3D double-storey design" /><figcaption>3D plans</figcaption></figure>
+          <figure><img src="home.jpg" alt="Completed modern house" /><figcaption>Completed house</figcaption></figure>
+          <figure><img src="render-b.jpg" alt="3D terrace house" /><figcaption>Architectural design</figcaption></figure>
+          <figure><img src="civil.jpg" alt="Excavator on a civil trench" /><figcaption>Heidelberg civil</figcaption></figure>
+          <figure><img src="retail.jpg" alt="Retail counter fit-out" /><figcaption>Retail fit-out</figcaption></figure>
+          <figure><img src="brickhouse.jpg" alt="Brick house under construction" /><figcaption>Structure</figcaption></figure>
+          <figure><img src="bath.jpg" alt="Finished bathroom" /><figcaption>Finishes</figcaption></figure>
+          <figure><img src="rdp.jpg" alt="Heidelberg RDP house" /><figcaption>Heidelberg RDP</figcaption></figure>
+          <figure><img src="bricks.jpg" alt="Blocks laid out on site" /><figcaption>Blocks</figcaption></figure>
         </div>
       </div>
     </section>
