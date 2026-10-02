@@ -9,13 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    :root { --ink:#14110e; --paper:#f3eee6; --brass:#9a7040; --muted:#6a6258; --line:rgba(20,17,14,.14); }
+    :root { --ink:#14110e; --paper:#f3eee6; --brass:#9a7040; --muted:#6a6258; --line:rgba(20,17,14,.14); --card:#fffdf8; --header:rgba(243,238,230,.92); }
+    html[data-theme="dark"] { --ink:#f3eee6; --paper:#12100e; --brass:#c4a06a; --muted:#b7aa9c; --line:rgba(243,238,230,.14); --card:#1b1815; --header:rgba(18,16,14,.92); }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; scroll-padding-top:76px; }
     body { margin:0; background:var(--paper); color:var(--ink); font-family:Outfit,sans-serif; font-weight:300; line-height:1.55; }
     img { max-width:100%; display:block; }
     a { color:inherit; text-decoration:none; }
-    header { position:sticky; top:0; z-index:20; background:rgba(243,238,230,.92); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+    header { position:sticky; top:0; z-index:20; background:var(--header); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
     .nav { max-width:1240px; margin:0 auto; padding:14px 22px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
     .brand { display:flex; align-items:center; gap:12px; }
     .brand img { width:36px; height:36px; object-fit:contain; }
@@ -25,7 +26,8 @@
     .links a { position:relative; }
     .links a:after { content:""; position:absolute; left:0; right:0; bottom:-5px; height:1px; background:var(--brass); transform:scaleX(0); transform-origin:left; transition:transform .35s ease; }
     .links a:hover:after { transform:scaleX(1); }
-    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--ink); color:#f3eee6; padding:13px 18px; letter-spacing:.14em; text-transform:uppercase; font-size:11px; border:0; cursor:pointer; transition:transform .35s ease, background .35s ease; }
+    .theme { width:42px; height:42px; border:1px solid var(--line); background:transparent; color:var(--ink); cursor:pointer; font-size:16px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--ink); color:var(--paper); padding:13px 18px; letter-spacing:.14em; text-transform:uppercase; font-size:11px; border:0; cursor:pointer; transition:transform .35s ease, background .35s ease; }
     .btn:hover { transform:translateY(-2px); }
     .btn.brass { background:var(--brass); color:#1a1208; }
     .btn.line { background:transparent; color:#f6f1e8; border:1px solid rgba(246,241,232,.45); }
@@ -63,7 +65,7 @@
     .lines b { font-family:"Cormorant Garamond",serif; font-size:28px; font-weight:500; }
     .lines span { display:block; color:var(--muted); margin-top:4px; }
     .about { display:grid; gap:28px; align-items:center; }
-    .mark-panel { background:#fffdf8; padding:36px 20px; display:grid; justify-items:center; }
+    .mark-panel { background:var(--card); padding:36px 20px; display:grid; justify-items:center; }
     .mark-panel img { width:min(200px,58vw); }
     .facts { list-style:none; padding:0; margin:22px 0 0; }
     .facts li { display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--line); padding:12px 0; }
@@ -86,7 +88,7 @@
     textarea { min-height:90px; }
     footer { padding:28px 22px 120px; border-top:1px solid var(--line); }
     .foot { display:flex; gap:16px; align-items:center; max-width:1240px; }
-    .foot img { width:48px; height:auto; background:#fffdf8; padding:6px; }
+    .foot img { width:48px; height:auto; background:var(--card); padding:6px; }
     .dock { position:fixed; left:12px; right:12px; bottom:12px; display:grid; grid-template-columns:1fr 1.4fr; gap:8px; z-index:30; }
     .dock a { text-align:center; padding:14px; }
     @keyframes rise { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
@@ -122,6 +124,7 @@
         <a href="#register">Registers</a>
         <a href="#quote">Quote</a>
       </nav>
+      <button class="theme" id="theme" type="button" aria-label="Toggle dark mode">◐</button>
       <a class="btn" href="#quote">Request a quote</a>
     </div>
   </header>
@@ -183,7 +186,7 @@
         </ol>
       </div>
     </section>
-    <section id="company" style="background:#fffdf8">
+    <section id="company">
       <div class="wrap about">
         <div class="mark-panel"><img src="logo.png" alt="Motlaitlai Construction and Projects" /></div>
         <div>
@@ -229,7 +232,7 @@
         </div>
       </div>
     </section>
-    <section id="quote" style="background:#fffdf8">
+    <section id="quote">
       <div class="wrap contact">
         <div>
           <h2>Call or WhatsApp.</h2>
@@ -260,6 +263,15 @@
     <a class="btn brass" href="https://wa.me/27698342585?text=Hi%2C%20I%20would%20like%20a%20quote%20from%20Motlaitlai%20Construction.">WhatsApp</a>
   </div>
   <script>
+    var root = document.documentElement;
+    var saved = localStorage.getItem("motlaitlai-theme");
+    if (saved) root.setAttribute("data-theme", saved);
+    else if (window.matchMedia("(prefers-color-scheme: dark)").matches) root.setAttribute("data-theme", "dark");
+    document.getElementById("theme").addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("motlaitlai-theme", next);
+    });
     document.getElementById("quoteform").addEventListener("submit", function (e) {
       e.preventDefault();
       var text = "Hi, quote request.%0AName: " + encodeURIComponent(document.getElementById("name").value.trim())
