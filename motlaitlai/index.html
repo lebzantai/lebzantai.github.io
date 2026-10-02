@@ -45,10 +45,13 @@
     .intro { max-width:48ch; color:var(--muted); margin:12px 0 0; }
     .grid4, .services, .regs, .clients { display:grid; gap:12px; margin-top:28px; }
     .card, .reg, .clients span { background:#fff; border:1px solid var(--line); }
-    .gallery { display:grid; gap:10px; margin-top:28px; }
-    .gallery figure { margin:0; background:#111; position:relative; overflow:hidden; }
-    .gallery img { width:100%; height:210px; object-fit:cover; }
-    .feature img { height:210px; }
+    .reel { margin-top:28px; overflow:hidden; }
+    .reel-track { display:flex; gap:12px; width:max-content; animation:slide 42s linear infinite; }
+    .reel:hover .reel-track { animation-play-state:paused; }
+    .reel figure { margin:0; width:280px; flex:none; background:#111; }
+    .reel img { width:280px; height:190px; object-fit:cover; }
+    .reel figcaption { padding:10px 12px 12px; color:#5f655f; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#fff; }
+    @keyframes slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
     .card div, .reg { padding:18px; }
     .card h3 { font-size:28px; }
     .card p, .reg span { color:var(--muted); margin:6px 0 0; }
@@ -81,8 +84,6 @@
     .dock a { text-align:center; padding:14px; }
     @media (min-width:860px) {
       .links { display:flex; }
-      .gallery { grid-template-columns:1fr 1fr; }
-      .gallery img { height:240px; }
       .about { grid-template-columns:.7fr 1.3fr; }
       .contact { grid-template-columns:.8fr 1.2fr; }
       .dock { display:none; }
@@ -126,19 +127,31 @@
     <section id="work">
       <div class="wrap">
         <div class="eyebrow">Selected work</div>
-        <h2>The pictures they sent.</h2>
-        <p class="intro">Finished houses, 3D plans, civil work and a retail fit-out. The weaker site shots were left out.</p>
-        <div class="gallery">
-          <figure class="feature"><img src="garden.jpg" alt="Completed house and garden" /><figcaption>Handover · March 2025</figcaption></figure>
-          <figure><img src="plans.jpg" alt="3D double-storey design" /><figcaption>3D plans</figcaption></figure>
-          <figure><img src="home.jpg" alt="Completed modern house" /><figcaption>Completed house</figcaption></figure>
-          <figure><img src="render-b.jpg" alt="3D terrace house" /><figcaption>Architectural design</figcaption></figure>
-          <figure><img src="civil.jpg" alt="Excavator on a civil trench" /><figcaption>Heidelberg civil</figcaption></figure>
-          <figure><img src="retail.jpg" alt="Retail counter fit-out" /><figcaption>Retail fit-out</figcaption></figure>
-          <figure><img src="brickhouse.jpg" alt="Brick house under construction" /><figcaption>Structure</figcaption></figure>
-          <figure><img src="bath.jpg" alt="Finished bathroom" /><figcaption>Finishes</figcaption></figure>
-          <figure><img src="rdp.jpg" alt="Heidelberg RDP house" /><figcaption>Heidelberg RDP</figcaption></figure>
-          <figure><img src="bricks.jpg" alt="Blocks laid out on site" /><figcaption>Blocks</figcaption></figure>
+        <h2>From the plans to the finished house.</h2>
+        <p class="intro">A slow pass of the company pictures.</p>
+        <div class="reel" aria-label="Project photographs">
+          <div class="reel-track">
+            <figure><img src="plans.jpg" alt="3D house design" /><figcaption>3D plans</figcaption></figure>
+            <figure><img src="render-b.jpg" alt="Terrace house design" /><figcaption>Design</figcaption></figure>
+            <figure><img src="home.jpg" alt="Completed house" /><figcaption>Completed house</figcaption></figure>
+            <figure><img src="garden.jpg" alt="Finished garden" /><figcaption>Handover</figcaption></figure>
+            <figure><img src="bath.jpg" alt="Finished bathroom" /><figcaption>Finishes</figcaption></figure>
+            <figure><img src="brickhouse.jpg" alt="House structure" /><figcaption>Structure</figcaption></figure>
+            <figure><img src="civil.jpg" alt="Civil trench" /><figcaption>Civil works</figcaption></figure>
+            <figure><img src="rdp.jpg" alt="RDP house" /><figcaption>Heidelberg RDP</figcaption></figure>
+            <figure><img src="bricks.jpg" alt="Blocks on site" /><figcaption>Blocks</figcaption></figure>
+            <figure><img src="retail.jpg" alt="Retail counter" /><figcaption>Retail fit-out</figcaption></figure>
+            <figure><img src="plans.jpg" alt="" /><figcaption>3D plans</figcaption></figure>
+            <figure><img src="render-b.jpg" alt="" /><figcaption>Design</figcaption></figure>
+            <figure><img src="home.jpg" alt="" /><figcaption>Completed house</figcaption></figure>
+            <figure><img src="garden.jpg" alt="" /><figcaption>Handover</figcaption></figure>
+            <figure><img src="bath.jpg" alt="" /><figcaption>Finishes</figcaption></figure>
+            <figure><img src="brickhouse.jpg" alt="" /><figcaption>Structure</figcaption></figure>
+            <figure><img src="civil.jpg" alt="" /><figcaption>Civil works</figcaption></figure>
+            <figure><img src="rdp.jpg" alt="" /><figcaption>Heidelberg RDP</figcaption></figure>
+            <figure><img src="bricks.jpg" alt="" /><figcaption>Blocks</figcaption></figure>
+            <figure><img src="retail.jpg" alt="" /><figcaption>Retail fit-out</figcaption></figure>
+          </div>
         </div>
       </div>
     </section>
