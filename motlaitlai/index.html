@@ -7,105 +7,102 @@
   <meta name="description" content="Motlaitlai Construction & Projects, established 2017. Architecture, construction, supply and brick manufacturing. NHBRC, CIDB, MBSA and SACAP." />
   <link rel="icon" href="logo-mark.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    :root { --ink:#101214; --paper:#f4f0e8; --brass:#a67c45; --brass-2:#e6d3b0; --muted:#5f655f; --line:rgba(16,18,20,.12); }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Outfit,sans-serif; font-weight:400; line-height:1.55; }
+    :root { --ink:#14110e; --paper:#f3eee6; --brass:#9a7040; --muted:#6a6258; --line:rgba(20,17,14,.14); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:76px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Outfit,sans-serif; font-weight:300; line-height:1.55; }
     img { max-width:100%; display:block; }
     a { color:inherit; text-decoration:none; }
-    .draft { background:#101214; color:#cfc6b8; text-align:center; font-size:11px; letter-spacing:.18em; text-transform:uppercase; padding:8px 12px; }
-    header { position:sticky; top:0; z-index:20; background:rgba(244,240,232,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
-    .nav { max-width:1180px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    header { position:sticky; top:0; z-index:20; background:rgba(243,238,230,.92); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+    .nav { max-width:1240px; margin:0 auto; padding:14px 22px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
     .brand { display:flex; align-items:center; gap:12px; }
-    .brand img { width:40px; height:40px; object-fit:contain; }
-    .hero { min-height:88vh; background:#111 url("hero.jpg") center 35%/cover no-repeat; color:#f6f1e8; display:grid; align-items:end; position:relative; overflow:hidden; }
-    .hero:before { content:""; position:absolute; inset:-4%; background:url("hero.jpg") center 35%/cover no-repeat; animation:drift 28s ease-in-out infinite alternate; }
-    .hero:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,14,.18), rgba(10,12,14,.78)); }
-    .hero-inner { position:relative; z-index:1; max-width:1180px; margin:0 auto; padding:72px 20px 40px; width:100%; }
-    .hero-inner > * { animation:rise .9s ease both; }
-    .hero-inner > :nth-child(2) { animation-delay:.12s; }
-    .hero-inner > :nth-child(3) { animation-delay:.22s; }
-    .hero-inner > :nth-child(4) { animation-delay:.32s; }
-    .hero-inner > :nth-child(5) { animation-delay:.42s; }
-    @keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
-    @keyframes drift { from { transform:scale(1.04) translate3d(0,0,0); } to { transform:scale(1.1) translate3d(-1.5%,-1%,0); } }
-    .btn, .links a, .clients span, .reg, .panel { transition:transform .35s ease, background .35s ease, color .35s ease, border-color .35s ease; }
-    .btn:hover { transform:translateY(-2px); }
+    .brand img { width:36px; height:36px; object-fit:contain; }
+    .brand strong { display:block; letter-spacing:.22em; font-size:12px; font-weight:500; }
+    .brand span { display:block; letter-spacing:.16em; text-transform:uppercase; font-size:9px; color:var(--muted); }
+    .links { display:none; gap:26px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
     .links a { position:relative; }
-    .links a:after { content:""; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:var(--brass); transform:scaleX(0); transform-origin:left; transition:transform .35s ease; }
+    .links a:after { content:""; position:absolute; left:0; right:0; bottom:-5px; height:1px; background:var(--brass); transform:scaleX(0); transform-origin:left; transition:transform .35s ease; }
     .links a:hover:after { transform:scaleX(1); }
-    .reel figure { transition:transform .45s ease; }
-    .reel figure:hover { transform:translateY(-4px); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--ink); color:#f3eee6; padding:13px 18px; letter-spacing:.14em; text-transform:uppercase; font-size:11px; border:0; cursor:pointer; transition:transform .35s ease, background .35s ease; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn.brass { background:var(--brass); color:#1a1208; }
+    .btn.line { background:transparent; color:#f6f1e8; border:1px solid rgba(246,241,232,.45); }
+    h1,h2,h3 { font-family:"Cormorant Garamond",serif; font-weight:500; margin:0; }
+    h1 { font-size:clamp(52px,9vw,92px); line-height:.9; max-width:9ch; font-weight:500; }
+    h2 { font-size:clamp(36px,5vw,62px); line-height:.95; }
+    .hero { min-height:92vh; color:#f6f1e8; display:grid; align-items:end; position:relative; overflow:hidden; background:#111; }
+    .hero:before { content:""; position:absolute; inset:-4%; background:url("hero.jpg") center 35%/cover no-repeat; animation:drift 28s ease-in-out infinite alternate; }
+    .hero:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,10,8,.12) 0%, rgba(12,10,8,.78) 100%); }
+    .hero-inner { position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:88px 22px 48px; width:100%; }
+    .hero-inner > * { animation:rise .9s ease both; }
+    .hero-inner > :nth-child(2) { animation-delay:.1s; }
+    .hero-inner > :nth-child(3) { animation-delay:.2s; }
+    .hero-inner > :nth-child(4) { animation-delay:.3s; }
+    .kicker { display:flex; align-items:center; gap:12px; letter-spacing:.22em; text-transform:uppercase; font-size:11px; color:#e6d3b0; margin-bottom:16px; }
+    .kicker:before { content:""; width:36px; height:1px; background:#e6d3b0; }
+    .lede { max-width:38ch; font-size:18px; color:#efe7db; margin:18px 0 26px; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .rule { margin-top:36px; display:flex; flex-wrap:wrap; gap:8px 22px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#e6dccb; }
+    section { padding:84px 22px; }
+    .wrap { max-width:1240px; margin:0 auto; }
+    .split { display:grid; gap:28px; }
+    .note { color:var(--muted); max-width:36ch; }
+    .reel { margin:36px -22px 0; overflow:hidden; }
+    .reel-track { display:flex; gap:14px; width:max-content; animation:slide 46s linear infinite; }
+    .reel:hover .reel-track { animation-play-state:paused; }
+    .reel figure { margin:0; width:300px; flex:none; }
+    .reel img { width:300px; height:200px; object-fit:cover; }
+    .reel figcaption { padding:10px 2px 0; color:var(--muted); font-size:11px; letter-spacing:.14em; text-transform:uppercase; }
+    .reel figure { overflow:hidden; }
     .reel img { transition:transform .6s ease; }
     .reel figure:hover img { transform:scale(1.04); }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation:none !important; transition:none !important; }
-    }
-    .mark-panel { background:#fff; border:1px solid var(--line); padding:28px 22px; display:grid; justify-items:center; }
-    .mark-panel img { width:min(220px, 62vw); height:auto; }
-    .foot img { width:72px; height:auto; background:#fff; padding:6px; }
-    .brand strong { display:block; letter-spacing:.2em; font-size:13px; font-weight:500; }
-    .brand span { display:block; letter-spacing:.14em; text-transform:uppercase; font-size:10px; color:var(--muted); }
-    .links { display:none; gap:22px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--ink); color:#f4f0e8; padding:12px 16px; letter-spacing:.1em; text-transform:uppercase; font-size:12px; border:0; }
-    .btn.brass { background:var(--brass); color:#1a1208; }
-    .btn.line { background:transparent; color:#f4f0e8; border:1px solid rgba(244,240,232,.4); }
-    h1,h2,h3 { font-family:"Cormorant Garamond",serif; font-weight:500; margin:0; letter-spacing:-.02em; }
-    h1 { font-size:clamp(42px,8vw,76px); line-height:.94; max-width:12ch; }
-    .lede { max-width:42ch; font-weight:300; font-size:18px; color:#efe7db; margin:14px 0 22px; }
-    .actions { display:flex; flex-wrap:wrap; gap:10px; }
-    .rule { margin-top:28px; border-top:1px solid rgba(246,241,232,.2); padding-top:14px; display:flex; flex-wrap:wrap; gap:8px 18px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#e6dccb; }
-    section { padding:72px 20px; }
-    .wrap { max-width:1180px; margin:0 auto; }
-    .eyebrow { letter-spacing:.2em; text-transform:uppercase; font-size:11px; color:var(--brass); margin-bottom:10px; }
-    h2 { font-size:clamp(34px,5vw,56px); line-height:.98; }
-    .intro { max-width:48ch; color:var(--muted); margin:12px 0 0; }
-    .grid4, .services, .regs, .clients { display:grid; gap:12px; margin-top:28px; }
-    .card, .reg, .clients span { background:#fff; border:1px solid var(--line); }
-    .reel { margin-top:28px; overflow:hidden; }
-    .reel-track { display:flex; gap:12px; width:max-content; animation:slide 42s linear infinite; }
-    .reel:hover .reel-track { animation-play-state:paused; }
-    .reel figure { margin:0; width:280px; flex:none; background:#111; overflow:hidden; }
-    .reel img { width:280px; height:190px; object-fit:cover; }
-    .reel figcaption { padding:10px 12px 12px; color:#5f655f; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#fff; }
-    @keyframes slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
-    .card div, .reg { padding:18px; }
-    .card h3 { font-size:28px; }
-    .card p, .reg span { color:var(--muted); margin:6px 0 0; }
-    .about { display:grid; gap:22px; align-items:center; }
-    .about img.photo { height:300px; width:100%; object-fit:cover; }
-    .mark-panel { background:#fff; border:1px solid var(--line); padding:28px 22px; display:grid; justify-items:center; }
-    .mark-panel img { width:min(220px, 62vw); height:auto; }
-    .foot { align-items:center; }
-    .foot img { width:72px; height:auto; background:#fff; padding:6px; }
-    .facts { list-style:none; padding:0; margin:18px 0 0; }
-    .facts li { display:flex; justify-content:space-between; gap:12px; border-top:1px solid var(--line); padding:11px 0; }
-    .facts span { color:var(--muted); }
-    .band { background:#101214; color:#f4f0e8; }
-    .band .eyebrow { color:var(--brass-2); }
-    .reg { background:#171b1f; }
-    .reg b { display:block; font-size:22px; font-weight:500; }
-    .reg span { letter-spacing:.12em; text-transform:uppercase; font-size:11px; color:var(--brass-2); }
-    .clients span { padding:14px; }
-    .contact { display:grid; gap:14px; }
-    .panel { background:#fff; border:1px solid var(--line); padding:22px; }
-    .panel a { border-bottom:1px solid var(--brass); }
-    label { display:block; margin:14px 0 6px; font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
-    input,select,textarea { width:100%; border:0; border-bottom:1px solid var(--line); background:transparent; font:inherit; padding:10px 0; }
+    .lines { list-style:none; padding:0; margin:28px 0 0; }
+    .lines li { display:grid; grid-template-columns:52px 1fr; gap:12px; border-top:1px solid var(--line); padding:18px 0; }
+    .lines b { font-family:"Cormorant Garamond",serif; font-size:28px; font-weight:500; }
+    .lines span { display:block; color:var(--muted); margin-top:4px; }
+    .about { display:grid; gap:28px; align-items:center; }
+    .mark-panel { background:#fffdf8; padding:36px 20px; display:grid; justify-items:center; }
+    .mark-panel img { width:min(200px,58vw); }
+    .facts { list-style:none; padding:0; margin:22px 0 0; }
+    .facts li { display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--line); padding:12px 0; }
+    .facts span { color:var(--muted); text-align:right; }
+    .band { background:#16130f; color:#f3eee6; }
+    .ledger { margin-top:28px; }
+    .ledger div { display:flex; justify-content:space-between; gap:16px; border-top:1px solid rgba(243,238,230,.16); padding:16px 0; }
+    .ledger span { letter-spacing:.16em; text-transform:uppercase; font-size:11px; color:#e6d3b0; }
+    .ledger b { font-weight:400; }
+    .clients { margin-top:22px; columns:1; }
+    .clients span { display:block; border-top:1px solid var(--line); padding:12px 0; }
+    .offices { display:grid; gap:22px; margin-top:28px; }
+    .offices article { border-top:1px solid var(--line); padding-top:14px; }
+    .offices small { letter-spacing:.16em; text-transform:uppercase; color:var(--brass); font-size:11px; }
+    .offices p { margin:8px 0 0; font-size:18px; }
+    .contact { display:grid; gap:28px; }
+    form { display:grid; gap:4px; }
+    label { margin-top:14px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+    input,select,textarea { width:100%; border:0; border-bottom:1px solid var(--line); background:transparent; font:inherit; padding:10px 0; color:inherit; }
     textarea { min-height:90px; }
-    .fine { color:var(--muted); font-size:13px; }
-    footer { background:#0c0e10; color:#d9d0c3; padding:36px 20px 110px; }
-    .foot { display:flex; gap:16px; align-items:center; }
-    .foot img { width:72px; height:auto; background:#fff; padding:6px; }
-    .dock { position:fixed; left:12px; right:12px; bottom:12px; display:grid; grid-template-columns:1fr 1.3fr; gap:8px; z-index:30; }
+    footer { padding:28px 22px 120px; border-top:1px solid var(--line); }
+    .foot { display:flex; gap:16px; align-items:center; max-width:1240px; }
+    .foot img { width:48px; height:auto; background:#fffdf8; padding:6px; }
+    .dock { position:fixed; left:12px; right:12px; bottom:12px; display:grid; grid-template-columns:1fr 1.4fr; gap:8px; z-index:30; }
     .dock a { text-align:center; padding:14px; }
+    @keyframes rise { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+    @keyframes drift { from { transform:scale(1.04); } to { transform:scale(1.1) translate3d(-1.5%,-1%,0); } }
+    @keyframes slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
     @media (min-width:860px) {
       .links { display:flex; }
-      .about { grid-template-columns:.7fr 1.3fr; }
-      .contact { grid-template-columns:.8fr 1.2fr; }
+      .split, .about, .contact { grid-template-columns:1fr 1fr; gap:64px; }
+      .clients { columns:2; }
+      .offices { grid-template-columns:repeat(3,1fr); }
       .dock { display:none; }
+      footer { padding-bottom:36px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after { animation:none !important; transition:none !important; }
     }
   </style>
 </head>
@@ -122,7 +119,7 @@
       <nav class="links">
         <a href="#work">Work</a>
         <a href="#company">Company</a>
-        <a href="#register">Register</a>
+        <a href="#register">Registers</a>
         <a href="#quote">Quote</a>
       </nav>
       <a class="btn" href="#quote">Request a quote</a>
@@ -131,58 +128,67 @@
   <main id="top">
     <section class="hero">
       <div class="hero-inner">
-        <div class="eyebrow" style="color:#e6d3b0">Established 2017</div>
+        <div class="kicker">Hartebeespoort · Est. 2017</div>
         <h1>Plans, structure and supply.</h1>
-        <p class="lede">Established in 2017 and named after the founder, Mr TG Motlaitlai. Architecture, construction, supply and brick manufacturing.</p>
+        <p class="lede">Named after the founder, Mr TG Motlaitlai. Architecture, construction, supply and brick manufacturing.</p>
         <div class="actions">
           <a class="btn brass" href="https://wa.me/27698342585?text=Hi%2C%20I%20would%20like%20a%20quote%20from%20Motlaitlai%20Construction.">WhatsApp</a>
           <a class="btn line" href="tel:+27698342585">069 834 2585</a>
         </div>
         <div class="rule">
-          <span>3D building plans</span><span>Civil</span><span>Building construction</span><span>Renovations</span><span>Maintenance</span>
+          <span>3D building plans</span><span>Civil</span><span>Building</span><span>Renovations</span><span>Maintenance</span>
         </div>
       </div>
     </section>
     <section id="work">
+      <div class="wrap split">
+        <h2>From the drawing to the finished house.</h2>
+        <p class="note">Company photographs, not stock. Hold a frame and the pass pauses.</p>
+      </div>
       <div class="wrap">
-        <div class="eyebrow">Selected work</div>
-        <h2>From the plans to the finished house.</h2>
-        <p class="intro">A slow pass of the company pictures.</p>
         <div class="reel" aria-label="Project photographs">
           <div class="reel-track">
-            <figure><img src="plans.jpg" alt="3D house design" /><figcaption>3D plans</figcaption></figure>
-            <figure><img src="render-b.jpg" alt="Terrace house design" /><figcaption>Design</figcaption></figure>
-            <figure><img src="home.jpg" alt="Completed house" /><figcaption>Completed house</figcaption></figure>
-            <figure><img src="garden.jpg" alt="Finished garden" /><figcaption>Handover</figcaption></figure>
-            <figure><img src="bath.jpg" alt="Finished bathroom" /><figcaption>Finishes</figcaption></figure>
-            <figure><img src="brickhouse.jpg" alt="House structure" /><figcaption>Structure</figcaption></figure>
-            <figure><img src="civil.jpg" alt="Civil trench" /><figcaption>Civil works</figcaption></figure>
-            <figure><img src="rdp.jpg" alt="RDP house" /><figcaption>Heidelberg RDP</figcaption></figure>
-            <figure><img src="bricks.jpg" alt="Blocks on site" /><figcaption>Blocks</figcaption></figure>
-            <figure><img src="retail.jpg" alt="Retail counter" /><figcaption>Retail fit-out</figcaption></figure>
-            <figure><img src="plans.jpg" alt="" /><figcaption>3D plans</figcaption></figure>
-            <figure><img src="render-b.jpg" alt="" /><figcaption>Design</figcaption></figure>
-            <figure><img src="home.jpg" alt="" /><figcaption>Completed house</figcaption></figure>
-            <figure><img src="garden.jpg" alt="" /><figcaption>Handover</figcaption></figure>
-            <figure><img src="bath.jpg" alt="" /><figcaption>Finishes</figcaption></figure>
-            <figure><img src="brickhouse.jpg" alt="" /><figcaption>Structure</figcaption></figure>
-            <figure><img src="civil.jpg" alt="" /><figcaption>Civil works</figcaption></figure>
-            <figure><img src="rdp.jpg" alt="" /><figcaption>Heidelberg RDP</figcaption></figure>
-            <figure><img src="bricks.jpg" alt="" /><figcaption>Blocks</figcaption></figure>
-            <figure><img src="retail.jpg" alt="" /><figcaption>Retail fit-out</figcaption></figure>
+            <figure><img src="plans.jpg" alt="3D house design" /><figcaption>01 · 3D plans</figcaption></figure>
+            <figure><img src="render-b.jpg" alt="Terrace house design" /><figcaption>02 · Design</figcaption></figure>
+            <figure><img src="home.jpg" alt="Completed house" /><figcaption>03 · Completed house</figcaption></figure>
+            <figure><img src="garden.jpg" alt="Finished garden" /><figcaption>04 · Handover</figcaption></figure>
+            <figure><img src="bath.jpg" alt="Finished bathroom" /><figcaption>05 · Finishes</figcaption></figure>
+            <figure><img src="brickhouse.jpg" alt="House structure" /><figcaption>06 · Structure</figcaption></figure>
+            <figure><img src="civil.jpg" alt="Civil trench" /><figcaption>07 · Civil works</figcaption></figure>
+            <figure><img src="rdp.jpg" alt="RDP house" /><figcaption>08 · Heidelberg RDP</figcaption></figure>
+            <figure><img src="bricks.jpg" alt="Blocks on site" /><figcaption>09 · Blocks</figcaption></figure>
+            <figure><img src="retail.jpg" alt="Retail counter" /><figcaption>10 · Retail fit-out</figcaption></figure>
+            <figure><img src="plans.jpg" alt="" /><figcaption>01 · 3D plans</figcaption></figure>
+            <figure><img src="render-b.jpg" alt="" /><figcaption>02 · Design</figcaption></figure>
+            <figure><img src="home.jpg" alt="" /><figcaption>03 · Completed house</figcaption></figure>
+            <figure><img src="garden.jpg" alt="" /><figcaption>04 · Handover</figcaption></figure>
+            <figure><img src="bath.jpg" alt="" /><figcaption>05 · Finishes</figcaption></figure>
+            <figure><img src="brickhouse.jpg" alt="" /><figcaption>06 · Structure</figcaption></figure>
+            <figure><img src="civil.jpg" alt="" /><figcaption>07 · Civil works</figcaption></figure>
+            <figure><img src="rdp.jpg" alt="" /><figcaption>08 · Heidelberg RDP</figcaption></figure>
+            <figure><img src="bricks.jpg" alt="" /><figcaption>09 · Blocks</figcaption></figure>
+            <figure><img src="retail.jpg" alt="" /><figcaption>10 · Retail fit-out</figcaption></figure>
           </div>
         </div>
       </div>
     </section>
-    <section id="company" style="background:#fff">
+    <section>
+      <div class="wrap split">
+        <h2>Four lines of work.</h2>
+        <ol class="lines">
+          <li><b>01</b><div>Architecture<span>3D building plans before a brick is laid.</span></div></li>
+          <li><b>02</b><div>Construction<span>Civil and building, including the Heidelberg RDP project.</span></div></li>
+          <li><b>03</b><div>Supply<span>Materials for developers, contractors and private clients.</span></div></li>
+          <li><b>04</b><div>Brick manufacturing<span>Blocks made and set out for the build.</span></div></li>
+        </ol>
+      </div>
+    </section>
+    <section id="company" style="background:#fffdf8">
       <div class="wrap about">
-        <div class="mark-panel">
-          <img src="logo.png" alt="Motlaitlai Construction and Projects" />
-        </div>
+        <div class="mark-panel"><img src="logo.png" alt="Motlaitlai Construction and Projects" /></div>
         <div>
-          <div class="eyebrow">The company</div>
           <h2>Named after the founder.</h2>
-          <p class="intro">Motlaitlai Construction & Projects is a construction company, contractor and architectural designer. It was established in 2017 and named after Mr TG Motlaitlai. Vincent Motlaitlai is the managing director.</p>
+          <p class="note">A construction company, contractor and architectural designer. Established in 2017 and named after Mr TG Motlaitlai. Vincent Motlaitlai is the managing director.</p>
           <ul class="facts">
             <li>Founder <span>Mr TG Motlaitlai</span></li>
             <li>Managing director <span>Vincent Motlaitlai</span></li>
@@ -193,23 +199,21 @@
       </div>
     </section>
     <section class="band" id="register">
-      <div class="wrap">
-        <div class="eyebrow">Proudly registered with</div>
-        <h2>The registers on the profile.</h2>
-        <div class="regs">
-          <div class="reg"><span>Company</span><b>K2017/349323/07</b></div>
-          <div class="reg"><span>NHBRC</span><b>3000195612</b></div>
-          <div class="reg"><span>CIDB</span><b>10145184</b></div>
-          <div class="reg"><span>CSD</span><b>MAAA0517970</b></div>
-          <div class="reg"><span>MBSA</span><b>Master Builders</b></div>
-          <div class="reg"><span>SACAP</span><b>Architectural council</b></div>
+      <div class="wrap split">
+        <h2>On the register.</h2>
+        <div class="ledger">
+          <div><span>Company</span><b>K2017/349323/07</b></div>
+          <div><span>NHBRC</span><b>3000195612</b></div>
+          <div><span>CIDB</span><b>10145184</b></div>
+          <div><span>CSD</span><b>MAAA0517970</b></div>
+          <div><span>MBSA</span><b>Master Builders</b></div>
+          <div><span>SACAP</span><b>Architectural council</b></div>
         </div>
       </div>
     </section>
     <section>
-      <div class="wrap">
-        <div class="eyebrow">Clients</div>
-        <h2>Public and private.</h2>
+      <div class="wrap split">
+        <h2>Who they build for.</h2>
         <div class="clients">
           <span>Department sectors</span><span>Retail and shopping malls</span><span>Property developers</span><span>Bank and mining institutions</span><span>Contractors</span><span>Municipalities</span><span>Private sectors</span><span>Individual clients</span>
         </div>
@@ -217,34 +221,30 @@
     </section>
     <section id="offices">
       <div class="wrap">
-        <div class="eyebrow">Offices</div>
-        <h2>Headquarters in the North West.</h2>
-        <p class="intro">Head office in Hartebeespoort, with offices in the Free State and Gauteng.</p>
-        <div class="clients">
-          <span><b>Headquarters</b><br />749 Melodie, Gateway Residential Estate, Hartebeespoort, North West</span>
-          <span><b>Free State</b><br />3765 Election Park, Theunissen, Masilo, 9410</span>
-          <span><b>Gauteng</b><br />21/616 Mara Crescent, Cosmo Creek Estate, Zandspruit x4</span>
+        <h2>Three addresses.</h2>
+        <div class="offices">
+          <article><small>Headquarters</small><p>749 Melodie, Gateway Residential Estate, Hartebeespoort, North West</p></article>
+          <article><small>Free State</small><p>3765 Election Park, Theunissen, Masilo, 9410</p></article>
+          <article><small>Gauteng</small><p>21/616 Mara Crescent, Cosmo Creek Estate, Zandspruit x4</p></article>
         </div>
       </div>
     </section>
-    <section id="quote" style="background:#fff">
+    <section id="quote" style="background:#fffdf8">
       <div class="wrap contact">
-        <div class="panel">
-          <div class="eyebrow">Contact</div>
-          <h2 style="font-size:42px">Call or WhatsApp.</h2>
+        <div>
+          <h2>Call or WhatsApp.</h2>
           <p><a href="tel:+27698342585">069 834 2585</a><br /><a href="tel:+27838948253">083 894 8253</a></p>
           <p><a href="mailto:motlaitlaiprojects@gmail.com">motlaitlaiprojects@gmail.com</a></p>
-          <p>749 Melodie, Gateway Residential Estate<br />Hartebeespoort, North West</p>
-          <p class="fine">Also at Election Park, Theunissen, and Cosmo Creek Estate, Zandspruit.</p>
+          <p class="note">749 Melodie, Gateway Residential Estate, Hartebeespoort, North West.</p>
         </div>
-        <form class="panel" id="quoteform">
-          <h3 style="font-size:34px">Request a quote</h3>
+        <form id="quoteform">
+          <h3 style="font-size:40px">A written scope starts here.</h3>
           <label for="name">Name</label><input id="name" required />
           <label for="phone">Phone</label><input id="phone" required />
           <label for="job">Work</label>
           <select id="job"><option>3D building plans</option><option>Construction</option><option>Supply</option><option>Brick manufacturing</option><option>Renovation</option></select>
           <label for="msg">Site and details</label><textarea id="msg"></textarea>
-          <button class="btn" style="margin-top:16px" type="submit">Send on WhatsApp</button>
+          <button class="btn" style="margin-top:18px" type="submit">Send on WhatsApp</button>
         </form>
       </div>
     </section>
@@ -252,14 +252,11 @@
   <footer>
     <div class="wrap foot">
       <img src="logo-mark.png" alt="Motlaitlai" />
-      <div>
-        <strong>Motlaitlai (Pty) Ltd · Construction & Projects</strong><br />
-        <span>Photographs supplied by the company.</span>
-      </div>
+      <div>Motlaitlai (Pty) Ltd · Construction & Projects<br />Photographs supplied by the company.</div>
     </div>
   </footer>
   <div class="dock">
-    <a class="btn line" style="background:#171b1f" href="tel:+27698342585">Call</a>
+    <a class="btn line" style="background:#17140f" href="tel:+27698342585">Call</a>
     <a class="btn brass" href="https://wa.me/27698342585?text=Hi%2C%20I%20would%20like%20a%20quote%20from%20Motlaitlai%20Construction.">WhatsApp</a>
   </div>
   <script>
