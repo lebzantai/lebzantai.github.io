@@ -214,3 +214,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--gold)}
 .skip:focus{left:12px}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* hero accreditation badges */
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.8rem}
+.badges span{border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.28);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.12em;padding:.38rem .85rem;border-radius:999px}
