@@ -218,3 +218,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 /* hero accreditation badges */
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.8rem}
 .badges span{border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.28);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.12em;padding:.38rem .85rem;border-radius:999px}
+
+/* home: turnkey feature */
+.feature .fchip{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:1.2rem;padding:.6rem 1.1rem;border-radius:999px;background:rgba(255,255,255,.1);border:1.5px solid var(--gold)}
+.feature .fchip b{color:var(--gold);font-size:1.05rem}.feature .fchip span{color:#dfe7d9;font-size:.9rem;font-weight:600}
+.feature .fctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.5rem}
