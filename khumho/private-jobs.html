@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Private Building &amp; Plumbing Jobs | Khumho Projects</title>
-<meta name="description" content="Direct building, plumbing, roofing and carpentry work for homeowners and businesses, quoted and managed by Khumho Projects with no middleman.">
+<title>Turnkey Construction &amp; Custom Builds | Khumho Projects</title>
+<meta name="description" content="Turnkey construction and custom builds: 13 single and double storey home designs from 55m&sup2; to 118m&sup2;, built from foundation to finish. Serving Johannesburg, Pretoria and the North West.">
 <meta name="theme-color" content="#2f4a22">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +17,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Khumho Projects">
-<meta property="og:title" content="Private Building &amp; Plumbing Jobs | Khumho Projects">
-<meta property="og:description" content="Direct building, plumbing, roofing and carpentry work for homeowners and businesses, quoted and managed by Khumho Projects with no middleman.">
+<meta property="og:title" content="Turnkey Construction &amp; Custom Builds | Khumho Projects">
+<meta property="og:description" content="Turnkey construction and custom builds: 13 single and double storey home designs from 55m&sup2; to 118m&sup2;, built from foundation to finish. Serving Johannesburg, Pretoria and the North West.">
 <meta property="og:image" content="https://khumhoprojects.co.za/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,6 +27,131 @@
 <meta property="og:url" content="https://khumhoprojects.co.za/private-jobs.html">
 <meta property="og:locale" content="en_ZA">
 <meta property="og:image:alt" content="Khumho Projects, building, plumbing, roofing and carpentry">
+<style>
+.stats{background:var(--green);color:#fff;padding:26px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.stats b{display:block;font-size:1.8rem;font-weight:800;color:var(--gold);line-height:1.1}
+.stats small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.9}
+@media (max-width:640px){.stats .wrap{grid-template-columns:repeat(2,1fr);row-gap:22px}.stats b{font-size:1.45rem;white-space:nowrap}}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 8px}
+.filters button{font-family:inherit;font-weight:700;font-size:.9rem;padding:.55rem 1.1rem;border-radius:999px;border:2px solid var(--green);background:#fff;color:var(--green);cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--green);color:#fff}
+.designs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px}
+@media (max-width:980px){.designs{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.designs{grid-template-columns:1fr}}
+.design{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.design[hidden]{display:none}
+.design .plan{background:#fff;border-bottom:1px solid var(--line);display:block;line-height:0;aspect-ratio:3/2;overflow:hidden}
+.design .plan img{width:100%;height:100%;object-fit:contain;padding:0}
+.design .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:4px;flex:1}
+.design .opt{font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.design h3{font-size:1.6rem;font-weight:800}
+.design .spec{font-weight:700;color:var(--ink);font-size:.95rem}
+.design .rooms{color:var(--muted);font-size:.9rem;flex:1}
+.design .btn{margin-top:12px;align-self:flex-start;padding:.6rem 1.05rem;font-size:.88rem}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px;list-style:none}
+@media (max-width:900px){.feat{grid-template-columns:repeat(2,1fr)}}
+.feat li{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;font-weight:700;color:var(--green);font-size:.95rem}
+.feat li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--gold-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f4a22' stroke-width='3'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E") center/14px no-repeat;border:2px solid var(--gold)}
+.intro{gap:40px;align-items:center}.intro .pic{aspect-ratio:7/6;box-shadow:0 10px 30px rgba(28,35,23,.12)}
+
+.phero{background:linear-gradient(115deg,#1b2a14 0%,#2f4a22 100%);color:#fff;padding:60px 0}
+.phero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.phero .eyebrow{color:var(--gold);margin-bottom:.4rem}
+@media (max-width:520px){.phero .crumb{display:none}}
+.phero .crumb{font-size:.82rem;color:#cdd6c6;margin-bottom:.7rem}.phero .crumb a{color:var(--gold);text-decoration:none}
+.phero h1{color:#fff;font-size:clamp(2rem,4.8vw,3.3rem);font-weight:800;letter-spacing:-.02em;margin-bottom:.9rem}
+.phero p{color:#dfe7d9;font-size:1.08rem;max-width:520px}
+.phero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.6rem}
+@media (max-width:520px){.phero .ctas .btn{flex:1 1 100%;justify-content:center}}
+.phero .pic{border-radius:16px;overflow:hidden;aspect-ratio:7/6;box-shadow:0 18px 44px rgba(0,0,0,.35);outline:2px solid rgba(194,163,90,.55);outline-offset:6px}
+.phero .pic img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.phero{padding:44px 0}.phero-grid{grid-template-columns:1fr;gap:34px}.phero .pic{aspect-ratio:4/3;outline-offset:4px;margin:0 6px}}
+.design{transition:transform .18s,box-shadow .18s}
+.design:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(28,35,23,.10)}
+.design .plan{position:relative}
+.design .tag{position:absolute;top:12px;left:12px;background:var(--green);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .65rem;border-radius:999px;line-height:1.3}
+@media (min-width:981px){.design.help{grid-column:span 2}.design.help .body{padding:34px 40px}}
+.design .tag.double{background:var(--gold);color:#1f1a0b}
+.design.help{background:var(--green);border-color:var(--green);justify-content:center}
+.design.help .body{justify-content:center;padding:30px 26px;gap:8px}
+.design.help .opt{color:var(--gold)}.design.help h3{color:#fff;font-size:1.5rem}.design.help .rooms{color:#dfe7d9;font-size:.95rem;flex:none}
+.design.help .btn{margin-top:14px}
+@media (prefers-reduced-motion:reduce){.design{transition:none}.design:hover{transform:none}}
+
+.design .plan{position:relative;display:block;width:100%;padding:0;border:0;cursor:zoom-in;font:inherit}
+.design .plan .zoom{position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.95);color:var(--green);display:grid;place-items:center;box-shadow:0 2px 8px rgba(28,35,23,.15);opacity:.85;transition:opacity .15s,transform .15s}
+.design .plan .zoom svg{width:18px;height:18px}
+.design .plan:hover .zoom,.design .plan:focus-visible .zoom{opacity:1;transform:scale(1.06)}
+.design .plan:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.design .spec{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;margin:2px 0 2px;font-weight:700;font-size:.92rem;color:var(--ink)}
+.design .spec li{display:inline-flex;align-items:center;gap:6px}
+.si{width:18px;height:18px;color:var(--green-2);flex:none}
+.design .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.design .acts .btn{margin:0;padding:.55rem .95rem;font-size:.86rem}
+.design.help .btn-ghost{border-color:rgba(255,255,255,.6)}
+.compare{margin-top:26px;border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden}
+.compare summary{cursor:pointer;padding:16px 20px;font-weight:800;color:var(--green);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.compare summary::-webkit-details-marker{display:none}
+.compare summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--gold)}
+.compare[open] summary::after{content:"\2212"}
+.compare .tw{overflow-x:auto;border-top:1px solid var(--line)}
+.compare table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:560px;font-variant-numeric:tabular-nums}
+.compare th{background:var(--green);color:#fff;text-align:left;font-weight:700;padding:11px 16px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+.compare td{padding:11px 16px;border-top:1px solid var(--line);color:var(--muted)}
+.compare td:nth-child(-n+4){color:var(--ink);white-space:nowrap}
+.compare tbody tr:nth-child(even){background:var(--bg-2)}
+.feat li{gap:14px}
+.feat li::before{content:none}
+.fi{flex:none;width:42px;height:42px;border-radius:50%;background:var(--gold-soft);border:1.5px solid var(--gold);color:var(--green);display:grid;place-items:center}
+.fi svg{width:22px;height:22px}
+.accr-band{background:var(--green);padding:26px 0}
+.accr-band .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;justify-content:center}
+.accr-band .ah{color:var(--gold);font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+.accr-band ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.accr-band li{border:1.5px solid rgba(194,163,90,.7);color:#fff;border-radius:999px;padding:.38rem .9rem;font-size:.84rem;font-weight:700}
+.lb{position:fixed;inset:0;margin:auto;height:fit-content;max-height:92vh;overflow:auto;border:0;border-radius:16px;padding:22px 22px 16px;max-width:min(760px,94vw);width:100%;background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.lb::backdrop{background:rgba(15,22,11,.78)}
+.lb img{width:100%;height:auto;display:block}
+.lb p{margin-top:10px;font-weight:700;color:var(--green);text-align:center}
+.lb form{position:absolute;top:10px;right:12px;background:none;border:0;padding:0;margin:0;box-shadow:none;width:auto;display:block}
+.lbx{width:40px;height:40px;border-radius:50%;border:0;background:var(--green-soft);color:var(--green);font-size:1.6rem;line-height:1;cursor:pointer}
+
+@media (min-width:1101px) and (max-width:1180px){.menu a{padding:.5rem .55rem;font-size:.86rem}.menu .cta a{margin-left:4px}}
+@media (max-width:1100px){
+  .burger{display:grid;place-items:center}
+  .menu{display:none;position:absolute;left:0;right:0;top:71px;background:#fff;flex-direction:column;align-items:stretch;padding:10px 16px 18px;border-bottom:3px solid var(--gold);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+  .menu.open{display:flex}
+  .menu a{padding:.85rem .6rem;font-size:1rem}
+  .menu .cta a{margin:8px 0 0;text-align:center}
+}
+.designs[data-f=double] .design.help{grid-column:1/-1}
+@media (max-width:980px){.designs[data-f=single] .design.help{grid-column:1/-1}}
+.lbbar{display:flex;align-items:center;gap:12px;margin-top:10px}.lbbar p{flex:1;margin:0!important;min-width:0}
+.lbnav{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--green);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.lbnav:hover{background:var(--green-2)}.lbnav:focus-visible,.lbx:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.lb p small{display:block;font-weight:600;color:var(--muted);font-size:.8rem;margin-top:2px}
+
+.phero .trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:1.6rem;font-size:.86rem;color:#dfe7d9;font-weight:600}
+.phero .trust li{display:inline-flex;align-items:center;gap:7px}
+.phero .trust li::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231b2a14' stroke-width='3.5'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E") center/10px no-repeat;flex:none}
+.pricechip{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:18px;padding:10px 18px;border-radius:999px;background:var(--gold-soft);border:1.5px solid var(--gold)}
+.pricechip b{color:var(--green);font-size:1.02rem}.pricechip span{color:var(--muted);font-size:.9rem;font-weight:600}
+.accr-band .wrap{flex-direction:column}
+.accr-band .clients{color:#dfe7d9;text-align:center;font-weight:700;font-size:.92rem;max-width:860px}
+.accr-band .clients span{display:block;color:var(--gold);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+.accr-band .accrrow{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:center}
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:inline-flex;align-items:center;gap:8px;background:#1f8f4e;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.15rem;border-radius:999px;box-shadow:0 10px 26px rgba(0,0,0,.25);transition:transform .15s}
+.fab:hover{transform:translateY(-2px)}.fab svg{width:22px;height:22px}
+.fab:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media (max-width:520px){.fab span{display:none}.fab{padding:.9rem}}
+.incl{margin-top:22px}
+.incl-h{display:block;font-size:.76rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green-2);margin-bottom:12px}
+.incl .feat{margin-top:0}
+.filters{margin-top:30px}
+.note{font-size:.85rem;color:var(--muted);margin-top:18px}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -34,42 +159,203 @@
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="Khumho Projects home"><img src="img/khumho-logo.png" alt="" width="54" height="32"><b>Khumho Projects</b></a>
     <button class="burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.getElementById('menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    <ul class="menu" id="menu"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="insurance.html">Insurance Claims</a></li><li><a href="private-jobs.html" aria-current=page>Private Jobs</a></li><li><a href="about.html">About Us</a></li><li class="cta"><a href="contact.html">Get a Quote</a></li></ul>
+    <ul class="menu" id="menu"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="insurance.html">Insurance Claims</a></li><li><a href="private-jobs.html" aria-current=page>Turnkey &amp; Custom Builds</a></li><li><a href="about.html">About Us</a></li><li class="cta"><a href="contact.html">Get a Quote</a></li></ul>
   </div>
 </header>
 <main id="main">
-<section class="phead" style="background-image:url(img/site-lead.webp)"><div class="wrap">
-<div class="crumb"><a href="index.html">Home</a> / Private Jobs</div><h1>Private Jobs</h1><p>Building, plumbing, roofing and carpentry for homeowners and businesses, dealt with directly between you and Khumho Projects.</p></div></section>
+<section class="phero"><div class="wrap phero-grid">
+<div><div class="crumb"><a href="index.html">Home</a> / Turnkey Construction &amp; Custom Builds</div><div class="eyebrow">Turnkey construction &amp; custom builds</div><h1>Build your home from scratch</h1><p>13 single and double storey home designs from 55m&sup2; to 118m&sup2;. Foundation to finish, dealt with directly between you and Khumho Projects.</p>
+<div class="ctas"><a class="btn btn-gold" href="#designs">See the designs</a><a class="btn btn-ghost" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27d%20like%20a%20quote%20to%20build%20a%20home." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> WhatsApp for a quote</a></div><ul class="trust"><li>Building since 2012</li><li>100% Black-owned &amp; women-led</li><li>NHBRC registered</li><li>B-BBEE Level 1</li></ul></div>
+<div class="pic"><img src="img/home-render.jpg" width="1374" height="1176" alt="A Khumho home under construction, brickwork and roof frame complete"></div>
+</div></section>
 
-<section>
+<div class="stats"><div class="wrap"><div><b>13</b><small>Home designs</small></div><div><b>55&ndash;118m&sup2;</b><small>Floor sizes</small></div><div><b>1 or 2</b><small>Storeys</small></div><div><b>From R690k</b><small>New builds</small></div></div></div>
+
+<section id="designs">
   <div class="wrap">
-    <div class="eyebrow">Our process</div>
+    <div class="eyebrow">Choose your design</div>
+    <h2>Pick a plan, we build it</h2>
+    <p class="lead">Turnkey means one contractor from foundation to finish. Our own qualified trades handle the building, plumbing, roofing and carpentry, so you get the keys to a finished home. Choose a design, then ask us for a quote.</p>
+    <p class="pricechip"><b>New builds from R690k</b><span>Single and double storey &middot; 55&ndash;118m&sup2;</span></p>
+    <div class="incl" id="included"><span class="incl-h">Features include</span>
+    <ul class="feat">
+      <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="6" rx="1"/><rect x="3" y="13" width="8" height="6" rx="1"/><rect x="13" y="13" width="8" height="6" rx="1"/></svg></span>Maxi bricks</li>
+      <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20v-5h14v5M8 15V9h8v6"/><path d="M12 9V4"/></svg></span>Semi-face foundation</li>
+      <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="3.5"/><path d="M12 2v1.5M5 9H3.5M20.5 9H19M7 4l1 1M17 4l-1 1"/><path d="M4 20l3-6h10l3 6z"/></svg></span>Solar geyser</li>
+      <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></svg></span>Aluminium windows</li>
+      <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span>LED lighting</li>
+      <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 4l10 8"/><path d="M5 12v8h14v-8"/><path d="M8 15c1.3-1.3 2.7 1.3 4 0s2.7 1.3 4 0"/></svg></span>Roof insulation</li>
+      <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg></span>Freehold stands</li>
+      <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M21 12v2"/></svg></span>Turnkey, foundation to finish</li>
+    </ul></div>
+    <div class="filters" role="group" aria-label="Filter designs">
+      <button type="button" data-f="all" aria-pressed="true">All 13</button>
+      <button type="button" data-f="single" aria-pressed="false">Single storey (10)</button>
+      <button type="button" data-f="double" aria-pressed="false">Double storey (3)</button>
+    </div>
+    <div class="designs" id="grid" data-f="all">
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 01 &middot; 55m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/c55.jpg" alt="Floor plan, 55 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 01</span><h3>55m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>2 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>1.5 Bathrooms</li></ul>
+          <span class="rooms">Living area &middot; Kitchen &middot; Bathroom + WC &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2055m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2055m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 02 &middot; 56.7m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/a56.jpg" alt="Floor plan, 56.7 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 02</span><h3>56.7m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>1.5 Bathrooms</li></ul>
+          <span class="rooms">Living area &middot; Kitchen &middot; Bathroom + WC &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2056.7m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2056.7m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 03 &middot; 61.3m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/a61.jpg" alt="Floor plan, 61.3 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 03</span><h3>61.3m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>2 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>1.5 Bathrooms</li></ul>
+          <span class="rooms">Living area &middot; Kitchen &middot; Bathroom + shower room &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2061.3m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2061.3m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 04 &middot; 61.6m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/c61.jpg" alt="Floor plan, 61.6 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 04</span><h3>61.6m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>1.5 Bathrooms</li></ul>
+          <span class="rooms">Living area &middot; Kitchen &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2061.6m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2061.6m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 05 &middot; 65m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/a65.jpg" alt="Floor plan, 65 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 05</span><h3>65m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>2 Bathrooms</li></ul>
+          <span class="rooms">Dining / living &middot; Kitchen &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2065m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2065m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 06 &middot; 71.8m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/a71.jpg" alt="Floor plan, 71.8 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 06</span><h3>71.8m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>1.5 Bathrooms</li></ul>
+          <span class="rooms">Living area &middot; Kitchen &middot; Bathroom + WC &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2071.8m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2071.8m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 07 &middot; 76.7m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/a76.jpg" alt="Floor plan, 76.7 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 07</span><h3>76.7m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>2 Bathrooms</li></ul>
+          <span class="rooms">Living area &middot; Dining &middot; Kitchen &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2076.7m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2076.7m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="double">
+        <button type="button" class="plan" data-cap="Design 08 &middot; 79.5m&sup2; &middot; Double storey" aria-label="View floor plan larger"><span class="tag double">Double storey</span><img src="img/plans2/e79.jpg" alt="Floor plan, 79.5 square metres, double storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 08</span><h3>79.5m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>2 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>1.5 Bathrooms</li></ul>
+          <span class="rooms">Duplex &middot; Living / dining &middot; Kitchen &middot; Study &middot; Powder room</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2079.5m%C2%B2%20%28double%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2079.5m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 09 &middot; 80.6m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/b80.jpg" alt="Floor plan, 80.6 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 09</span><h3>80.6m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>2 Bathrooms</li></ul>
+          <span class="rooms">Living area &middot; Dining &middot; Kitchen &middot; Study &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2080.6m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2080.6m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 10 &middot; 82.2m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/b82.jpg" alt="Floor plan, 82.2 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 10</span><h3>82.2m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>2 Bathrooms</li></ul>
+          <span class="rooms">Living area &middot; Dining &middot; Kitchen &middot; Study &middot; Entry</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2082.2m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2082.2m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="single">
+        <button type="button" class="plan" data-cap="Design 11 &middot; 96.2m&sup2; &middot; Single storey" aria-label="View floor plan larger"><span class="tag single">Single storey</span><img src="img/plans2/e96.jpg" alt="Floor plan, 96.2 square metres, single storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 11</span><h3>96.2m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>1.5 Bathrooms</li></ul>
+          <span class="rooms">Open-plan living / dining &middot; Kitchen &middot; Guest WC &middot; Alfresco patio</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%2096.2m%C2%B2%20%28single%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%2096.2m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="double">
+        <button type="button" class="plan" data-cap="Design 12 &middot; 107m&sup2; &middot; Double storey" aria-label="View floor plan larger"><span class="tag double">Double storey</span><img src="img/plans2/dc107.jpg" alt="Floor plan, 107 square metres, double storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 12</span><h3>107m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>2.5 Bathrooms</li></ul>
+          <span class="rooms">Lounge &middot; Kitchen / dining &middot; Scullery &middot; Guest WC &middot; Optional carport or garage</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%20107m%C2%B2%20%28double%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%20107m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design" data-storey="double">
+        <button type="button" class="plan" data-cap="Design 13 &middot; 118m&sup2; &middot; Double storey" aria-label="View floor plan larger"><span class="tag double">Double storey</span><img src="img/plans2/ds118.jpg" alt="Floor plan, 118 square metres, double storey" width="1200" height="900" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>
+        <div class="body"><span class="opt">Design 13</span><h3>118m&sup2;</h3>
+          <ul class="spec"><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>3 Bedrooms</li><li><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3M7 19l-1 2M17 19l1 2"/></svg>2.5 Bathrooms</li></ul>
+          <span class="rooms">Lounge &middot; Kitchen / dining &middot; Scullery &middot; Guest WC &middot; Optional patio and garage</span>
+          <div class="acts"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20interested%20in%20the%20118m%C2%B2%20%28double%20storey%29.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Get a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=Enquiry%20-%20118m2%20home%20design"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div>
+        </div>
+      </article>
+      <article class="design help" data-storey="all"><div class="body"><span class="opt">Custom builds</span><h3>Want something different?</h3><span class="rooms">We also build to your own requirements. Tell us your stand, budget and family size and we'll help you plan it.</span><div class="acts"><a class="btn btn-gold" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27d%20like%20to%20discuss%20a%20custom%20build." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> WhatsApp us</a><a class="btn btn-ghost" href="mailto:khumho.office@gmail.com?subject=Custom%20build%20enquiry"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a></div></div></article>
+    </div>
+    <details class="compare">
+      <summary>Compare all 13 designs</summary>
+      <div class="tw"><table><thead><tr><th>Design</th><th>Storey</th><th>Size</th><th>Bedrooms</th><th>Bathrooms</th><th>Rooms &amp; features</th></tr></thead><tbody><tr data-storey="single"><td><b>01</b></td><td>Single storey</td><td>55m&sup2;</td><td>2</td><td>1.5</td><td>Living area &middot; Kitchen &middot; Bathroom + WC &middot; Entry</td></tr><tr data-storey="single"><td><b>02</b></td><td>Single storey</td><td>56.7m&sup2;</td><td>3</td><td>1.5</td><td>Living area &middot; Kitchen &middot; Bathroom + WC &middot; Entry</td></tr><tr data-storey="single"><td><b>03</b></td><td>Single storey</td><td>61.3m&sup2;</td><td>2</td><td>1.5</td><td>Living area &middot; Kitchen &middot; Bathroom + shower room &middot; Entry</td></tr><tr data-storey="single"><td><b>04</b></td><td>Single storey</td><td>61.6m&sup2;</td><td>3</td><td>1.5</td><td>Living area &middot; Kitchen &middot; Entry</td></tr><tr data-storey="single"><td><b>05</b></td><td>Single storey</td><td>65m&sup2;</td><td>3</td><td>2</td><td>Dining / living &middot; Kitchen &middot; Entry</td></tr><tr data-storey="single"><td><b>06</b></td><td>Single storey</td><td>71.8m&sup2;</td><td>3</td><td>1.5</td><td>Living area &middot; Kitchen &middot; Bathroom + WC &middot; Entry</td></tr><tr data-storey="single"><td><b>07</b></td><td>Single storey</td><td>76.7m&sup2;</td><td>3</td><td>2</td><td>Living area &middot; Dining &middot; Kitchen &middot; Entry</td></tr><tr data-storey="double"><td><b>08</b></td><td>Double storey</td><td>79.5m&sup2;</td><td>2</td><td>1.5</td><td>Duplex &middot; Living / dining &middot; Kitchen &middot; Study &middot; Powder room</td></tr><tr data-storey="single"><td><b>09</b></td><td>Single storey</td><td>80.6m&sup2;</td><td>3</td><td>2</td><td>Living area &middot; Dining &middot; Kitchen &middot; Study &middot; Entry</td></tr><tr data-storey="single"><td><b>10</b></td><td>Single storey</td><td>82.2m&sup2;</td><td>3</td><td>2</td><td>Living area &middot; Dining &middot; Kitchen &middot; Study &middot; Entry</td></tr><tr data-storey="single"><td><b>11</b></td><td>Single storey</td><td>96.2m&sup2;</td><td>3</td><td>1.5</td><td>Open-plan living / dining &middot; Kitchen &middot; Guest WC &middot; Alfresco patio</td></tr><tr data-storey="double"><td><b>12</b></td><td>Double storey</td><td>107m&sup2;</td><td>3</td><td>2.5</td><td>Lounge &middot; Kitchen / dining &middot; Scullery &middot; Guest WC &middot; Optional carport or garage</td></tr><tr data-storey="double"><td><b>13</b></td><td>Double storey</td><td>118m&sup2;</td><td>3</td><td>2.5</td><td>Lounge &middot; Kitchen / dining &middot; Scullery &middot; Guest WC &middot; Optional patio and garage</td></tr></tbody></table></div>
+    </details>
+    <p class="note">Floor plans are for reference. Final layout and price depend on your stand and requirements, confirmed in your quote.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">Not building new?</div>
+      <h2>Renovations, maintenance and repairs too</h2>
+      <p class="lead">Extensions, roofing, plumbing, carpentry and general maintenance for homeowners and businesses, agreed directly with you.</p>
+      <p style="margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn-green" href="mailto:khumho.office@gmail.com?subject=Renovation%20or%20repair%20enquiry"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Request a quote</a><a class="btn btn-line" href="services.html">Our services</a></p>
+    </div>
+    <div class="pic"><img src="img/roofing.webp" width="440" height="440" alt="Roof work in progress" loading="lazy"></div>
+  </div>
+</section>
+<section id="process">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
     <h2>From first enquiry to handover</h2>
     <p class="lead">No insurer and no middleman. You deal with us from the first call to the final walk-through.</p>
     <ol class="steps">
-      <li><b>Enquire &amp; assess</b><span>Tell us what needs doing, then we inspect on site so the job is scoped properly.</span></li>
-      <li><b>Scope &amp; quote</b><span>A clear scope of work and itemised quote for you to approve.</span></li>
-      <li><b>Build &amp; repair</b><span>Work by qualified trades, compliant with NHBRC, PIRB and building regulations.</span></li>
+      <li><b>Choose a design</b><span>Pick one of our 13 floor plans, or tell us what you want for a custom build.</span></li>
+      <li><b>Site &amp; quote</b><span>We assess your stand and send a clear, itemised quote to approve.</span></li>
+      <li><b>Build</b><span>Building, plumbing, roofing and carpentry by qualified trades, compliant with NHBRC, PIRB and building regulations.</span></li>
       <li><b>Handover</b><span>Final walk-through with compliance certificates where required.</span></li>
     </ol>
   </div>
 </section>
-<section class="alt">
-  <div class="wrap split">
-    <div>
-      <div class="eyebrow">Who it's for</div>
-      <h2>Homeowners and businesses</h2>
-      <p class="lead">New builds, renovations, leaks, roofs, carpentry and plumbing repairs, agreed directly with you and paid for by you.</p>
-      <p style="margin-top:1.4rem"><a class="btn btn-green" href="mailto:khumho.office@gmail.com?subject=Private%20job%20enquiry"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Request a private quote</a></p>
-    </div>
-    <div class="pic"><img src="img/building.webp" width="440" height="440" alt="Building work in progress" loading="lazy"></div>
-  </div>
-</section>
+
+<a class="fab" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%20saw%20your%20home%20designs%20and%20would%20like%20a%20quote." target="_blank" rel="noopener" aria-label="WhatsApp Khumho Projects"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>WhatsApp us</span></a>
+<dialog class="lb" id="lb" aria-label="Floor plan"><form method="dialog"><button class="lbx" aria-label="Close">&times;</button></form><img id="lbimg" src="" alt=""><div class="lbbar"><button type="button" class="lbnav lbprev" aria-label="Previous floor plan">&lsaquo;</button><p><span id="lbcap"></span><small id="lbpos"></small></p><button type="button" class="lbnav lbnext" aria-label="Next floor plan">&rsaquo;</button></div></dialog>
+<script>
+(function(){var g=document.getElementById('grid'),b=document.querySelectorAll('.filters button'),rows=document.querySelectorAll('.compare tbody tr');
+b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.setAttribute('aria-pressed',y===x)});var f=x.getAttribute('data-f');g.setAttribute('data-f',f);
+g.querySelectorAll('.design').forEach(function(c){var d=c.getAttribute('data-storey');c.hidden=!(f==='all'||d==='all'||d===f)});
+rows.forEach(function(r){r.hidden=!(f==='all'||r.getAttribute('data-storey')===f)})})});
+var lb=document.getElementById('lb'),li=document.getElementById('lbimg'),lc=document.getElementById('lbcap'),lp=document.getElementById('lbpos'),cur=0;
+function vis(){return [].filter.call(document.querySelectorAll('.design .plan'),function(p){return !p.closest('.design').hidden})}
+function show(i){var v=vis();if(!v.length)return;cur=(i+v.length)%v.length;var p=v[cur],im=p.querySelector('img');li.src=im.src;li.alt=im.alt;lc.innerHTML=p.getAttribute('data-cap');lp.textContent=(cur+1)+' of '+v.length}
+document.querySelectorAll('.design .plan').forEach(function(p){p.addEventListener('click',function(){show(vis().indexOf(p));if(lb.showModal){lb.showModal()}else{lb.setAttribute('open','')}})});
+lb.querySelector('.lbprev').addEventListener('click',function(){show(cur-1)});
+lb.querySelector('.lbnext').addEventListener('click',function(){show(cur+1)});
+lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){show(cur-1)}else if(e.key==='ArrowRight'){show(cur+1)}});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+})();
+</script>
 </main>
+<section class="accr-band" aria-label="Accreditations and clients"><div class="wrap"><p class="clients"><span>Trusted by corporate clients including</span> Santam &middot; MiWay &middot; Absa &middot; Nedbank &middot; Europassist / Azoza &middot; Intelligent Administrators</p><div class="accrrow"><span class="ah">Fully accredited &amp; compliant</span><ul><li>NHBRC</li><li>PIRB</li><li>IOPSA</li><li>PRAWA</li><li>B-BBEE Level 1</li><li>Dept. of Labour compliant</li><li>Public liability cover</li><li>Professional indemnity cover</li></ul></div></div></section>
 <section class="band">
   <div class="wrap">
-    <div><h2>Need a quote, put us to the test.</h2><p>Email us the details and we'll respond with next steps.</p></div>
-    <div class="ctas"><a class="btn btn-green" href="contact.html"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Request a quote</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com">khumho.office@gmail.com</a></div>
+    <div><h2>Ready to build? Put us to the test.</h2><p>Send us the design you like and where your stand is. We'll come back to you with next steps and a quote.</p></div>
+    <div class="ctas"><a class="btn btn-green" href="https://wa.me/27679609162?text=Hi%20Khumho%20Projects%2C%20I%27m%20ready%20to%20build.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> WhatsApp 067 960 9162</a><a class="btn btn-line" href="mailto:khumho.office@gmail.com?subject=New%20build%20quote">khumho.office@gmail.com</a></div>
   </div>
 </section>
 <footer>
@@ -77,13 +363,13 @@
     <div class="fgrid">
       <div>
         <div class="fbrand"><span class="flogo"><img src="img/khumho-logo.png" alt="" width="44" height="26"></span><b>Khumho Projects</b></div>
-        <p>Building · Plumbing · Roofing · Carpentry. A proudly South African, 100% Black-owned and women-led construction company serving Gauteng and the North West since 2012.</p>
+        <p>Building &middot; Plumbing &middot; Roofing &middot; Carpentry. A proudly South African, 100% Black-owned and women-led construction company serving Gauteng and the North West since 2012.</p>
       </div>
-      <div><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="insurance.html">Insurance claims</a></li><li><a href="private-jobs.html">Private jobs</a></li><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Accreditations</h4><ul><li>B-BBEE Level 1</li><li>NHBRC registered</li><li>PIRB · IOPSA · PRAWA</li><li>Dept. of Labour compliant</li><li>Public liability cover</li><li>Professional indemnity cover</li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="insurance.html">Insurance claims</a></li><li><a href="private-jobs.html">Turnkey construction &amp; custom builds</a></li><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Accreditations</h4><ul><li>B-BBEE Level 1</li><li>NHBRC registered</li><li>PIRB &middot; IOPSA &middot; PRAWA</li><li>Dept. of Labour compliant</li><li>Public liability cover</li><li>Professional indemnity cover</li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="mailto:khumho.office@gmail.com">khumho.office@gmail.com</a></li><li><a href="tel:+27679609162">067 960 9162</a></li><li>Johannesburg, Pretoria &amp; North West</li></ul></div>
     </div>
-    <div class="legal"><span>© 2026 Khumho Projects. All rights reserved.</span><span>Website by <a href="https://symmetrasystems.org" target="_blank" rel="noopener">Symmetra Systems</a></span></div>
+    <div class="legal"><span>&copy; 2026 Khumho Projects. All rights reserved.</span><span>Website by <a href="https://symmetrasystems.org" target="_blank" rel="noopener">Symmetra Systems</a></span></div>
   </div>
 </footer>
 </body>
