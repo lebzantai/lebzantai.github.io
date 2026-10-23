@@ -2,134 +2,302 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Motlaitlai Construction & Projects</title>
-  <meta name="description" content="Motlaitlai Construction & Projects, established 2017. Architecture, construction, supply and brick manufacturing. NHBRC, CIDB, MBSA and SACAP." />
-  <link rel="icon" href="logo-mark.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Motlaitlai Construction & Projects | Hartebeespoort</title>
+  <meta name="description" content="Motlaitlai Construction & Projects, established 2017 in Hartebeespoort. Architecture, construction, supply and brick manufacturing. NHBRC, CIDB, MBSA and SACAP." />
+  <meta name="theme-color" content="#f3eee6" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#12100e" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://lebzantai.github.io/motlaitlai/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Motlaitlai Construction & Projects" />
+  <meta property="og:description" content="Plans, structure and supply. Architecture, construction, supply and brick manufacturing from Hartebeespoort." />
+  <meta property="og:image" content="https://lebzantai.github.io/motlaitlai/hero.jpg" />
+  <meta property="og:url" content="https://lebzantai.github.io/motlaitlai/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="logo-mark-sm.png" />
+  <link rel="apple-touch-icon" href="logo-mark-sm.png" />
+  <link rel="preload" as="image" href="hero.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Motlaitlai Construction & Projects",
+    "foundingDate": "2017",
+    "telephone": ["+27698342585", "+27838948253"],
+    "email": "motlaitlaiprojects@gmail.com",
+    "image": "https://lebzantai.github.io/motlaitlai/hero.jpg",
+    "url": "https://lebzantai.github.io/motlaitlai/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "749 Melodie, Gateway Residential Estate",
+      "addressLocality": "Hartebeespoort",
+      "addressRegion": "North West",
+      "addressCountry": "ZA"
+    }
+  }
+  </script>
   <style>
-    :root { --ink:#14110e; --paper:#f3eee6; --brass:#9a7040; --muted:#6a6258; --line:rgba(20,17,14,.14); --card:#fffdf8; --header:rgba(243,238,230,.92); }
-    html[data-theme="dark"] { --ink:#f3eee6; --paper:#12100e; --brass:#c4a06a; --muted:#b7aa9c; --line:rgba(243,238,230,.14); --card:#1b1815; --header:rgba(18,16,14,.92); }
+    :root {
+      --ink:#14110e; --paper:#f3eee6; --brass:#9a7040; --brass-soft:rgba(154,112,64,.14);
+      --muted:#6a6258; --line:rgba(20,17,14,.14); --card:#fffdf8; --header:rgba(243,238,230,.88);
+      --ease:cubic-bezier(.22,.8,.24,1);
+    }
+    html[data-theme="dark"] {
+      --ink:#f3eee6; --paper:#12100e; --brass:#c4a06a; --brass-soft:rgba(196,160,106,.14);
+      --muted:#b7aa9c; --line:rgba(243,238,230,.14); --card:#1b1815; --header:rgba(18,16,14,.88);
+    }
     * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:76px; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Outfit,sans-serif; font-weight:300; line-height:1.55; }
+    html { scroll-behavior:smooth; scroll-padding-top:84px; -webkit-text-size-adjust:100%; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Outfit,system-ui,sans-serif; font-weight:300; line-height:1.6; transition:background .4s ease, color .4s ease; }
     img { max-width:100%; display:block; }
     a { color:inherit; text-decoration:none; }
-    header { position:sticky; top:0; z-index:20; background:var(--header); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
-    .nav { max-width:1240px; margin:0 auto; padding:14px 22px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
-    .brand { display:flex; align-items:center; gap:12px; }
-    .brand img { width:36px; height:36px; object-fit:contain; }
+    button { font:inherit; color:inherit; }
+    :focus-visible { outline:2px solid var(--brass); outline-offset:3px; }
+    .skip { position:absolute; left:12px; top:-60px; z-index:100; background:var(--ink); color:var(--paper); padding:10px 16px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; transition:top .2s; }
+    .skip:focus { top:12px; }
+
+    /* header */
+    header { position:sticky; top:0; z-index:40; background:var(--header); backdrop-filter:blur(18px) saturate(1.2); -webkit-backdrop-filter:blur(18px) saturate(1.2); border-bottom:1px solid var(--line); transition:box-shadow .3s ease; }
+    header.scrolled { box-shadow:0 8px 30px rgba(20,17,14,.08); }
+    .nav { max-width:1240px; margin:0 auto; padding:14px 22px; display:flex; align-items:center; justify-content:space-between; gap:14px; transition:padding .3s var(--ease); }
+    header.scrolled .nav { padding-top:9px; padding-bottom:9px; }
+    .brand { display:flex; align-items:center; gap:12px; margin-right:auto; }
+    .brand img { width:38px; height:34px; object-fit:contain; }
     .brand strong { display:block; letter-spacing:.22em; font-size:12px; font-weight:500; }
     .brand span { display:block; letter-spacing:.16em; text-transform:uppercase; font-size:9px; color:var(--muted); }
-    .links { display:none; gap:26px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
-    .links a { position:relative; }
-    .links a:after { content:""; position:absolute; left:0; right:0; bottom:-5px; height:1px; background:var(--brass); transform:scaleX(0); transform-origin:left; transition:transform .35s ease; }
-    .links a:hover:after { transform:scaleX(1); }
-    .theme { width:42px; height:42px; border:1px solid var(--line); background:transparent; color:var(--ink); cursor:pointer; font-size:16px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--ink); color:var(--paper); padding:13px 18px; letter-spacing:.14em; text-transform:uppercase; font-size:11px; border:0; cursor:pointer; transition:transform .35s ease, background .35s ease; }
-    .btn:hover { transform:translateY(-2px); }
+    .links { display:none; gap:28px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
+    .links a { position:relative; padding:6px 0; }
+    .links a:after { content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--brass); transform:scaleX(0); transform-origin:left; transition:transform .35s var(--ease); }
+    .links a:hover:after, .links a.on:after { transform:scaleX(1); }
+    .icon-btn { width:42px; height:42px; border:1px solid var(--line); background:transparent; cursor:pointer; font-size:16px; display:grid; place-items:center; transition:border-color .25s, background .25s; }
+    .icon-btn:hover { border-color:var(--brass); background:var(--brass-soft); }
+    .burger { display:grid; }
+    .burger span, .burger span:before, .burger span:after { display:block; width:18px; height:1.5px; background:currentColor; position:relative; transition:transform .3s var(--ease), background .2s; }
+    .burger span:before, .burger span:after { content:""; position:absolute; left:0; }
+    .burger span:before { top:-6px; } .burger span:after { top:6px; }
+    header.open .burger span { background:transparent; }
+    header.open .burger span:before { top:0; transform:rotate(45deg); }
+    header.open .burger span:after { top:0; transform:rotate(-45deg); }
+    .mobile-nav { display:none; border-top:1px solid var(--line); padding:8px 22px 22px; }
+    header.open .mobile-nav { display:grid; animation:rise .35s var(--ease) both; }
+    .mobile-nav a { padding:16px 0; border-bottom:1px solid var(--line); font-family:"Cormorant Garamond",serif; font-size:28px; }
+    header .head-quote { display:none; }
+
+    /* buttons */
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:var(--ink); color:var(--paper); padding:14px 22px; letter-spacing:.14em; text-transform:uppercase; font-size:11px; font-weight:400; border:0; cursor:pointer; transition:transform .35s var(--ease), background .35s, box-shadow .35s; }
+    .btn:hover { transform:translateY(-2px); box-shadow:0 10px 24px rgba(20,17,14,.18); }
     .btn.brass { background:var(--brass); color:#1a1208; }
     .btn.line { background:transparent; color:#f6f1e8; border:1px solid rgba(246,241,232,.45); }
+    .btn.line:hover { background:rgba(246,241,232,.1); box-shadow:none; }
+    .btn.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+    .btn.ghost:hover { border-color:var(--brass); box-shadow:none; }
+
     h1,h2,h3 { font-family:"Cormorant Garamond",serif; font-weight:500; margin:0; }
-    h1 { font-size:clamp(52px,9vw,92px); line-height:.9; max-width:9ch; font-weight:500; }
-    h2 { font-size:clamp(36px,5vw,62px); line-height:.95; }
-    .hero { min-height:92vh; color:#f6f1e8; display:grid; align-items:end; position:relative; overflow:hidden; background:#111; }
+    h1 { font-size:clamp(52px,9vw,96px); line-height:.9; max-width:9ch; }
+    h2 { font-size:clamp(36px,5vw,62px); line-height:.98; }
+    .eyebrow { display:flex; align-items:center; gap:12px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass); margin-bottom:18px; }
+    .eyebrow:before { content:""; width:28px; height:1px; background:currentColor; }
+
+    /* hero */
+    .hero { min-height:92vh; min-height:92svh; color:#f6f1e8; display:grid; align-items:end; position:relative; overflow:hidden; background:#111; }
     .hero:before { content:""; position:absolute; inset:-4%; background:url("hero.jpg") center 35%/cover no-repeat; animation:drift 28s ease-in-out infinite alternate; }
-    .hero:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,10,8,.12) 0%, rgba(12,10,8,.78) 100%); }
-    .hero-inner { position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:88px 22px 48px; width:100%; }
-    .hero-inner > * { animation:rise .9s ease both; }
-    .hero-inner > :nth-child(2) { animation-delay:.1s; }
-    .hero-inner > :nth-child(3) { animation-delay:.2s; }
-    .hero-inner > :nth-child(4) { animation-delay:.3s; }
-    .kicker { display:flex; align-items:center; gap:12px; letter-spacing:.22em; text-transform:uppercase; font-size:11px; color:#e6d3b0; margin-bottom:16px; }
+    .hero:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,10,8,.5) 0%, rgba(12,10,8,.38) 40%, rgba(12,10,8,.88) 100%); }
+    .hero-inner { position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:96px 22px 104px; width:100%; }
+    .hero-inner > * { animation:rise .9s var(--ease) both; }
+    .hero-inner > :nth-child(2) { animation-delay:.1s; } .hero-inner > :nth-child(3) { animation-delay:.2s; }
+    .hero-inner > :nth-child(4) { animation-delay:.3s; } .hero-inner > :nth-child(5) { animation-delay:.4s; }
+    .kicker { display:flex; align-items:center; gap:12px; letter-spacing:.22em; text-transform:uppercase; font-size:11px; color:#f0dfbd; margin-bottom:18px; text-shadow:0 1px 12px rgba(0,0,0,.6); }
     .kicker:before { content:""; width:36px; height:1px; background:#e6d3b0; }
-    .lede { max-width:38ch; font-size:18px; color:#efe7db; margin:18px 0 26px; }
+    .lede { max-width:40ch; font-size:19px; color:#efe7db; margin:20px 0 28px; }
     .actions { display:flex; flex-wrap:wrap; gap:10px; }
-    .rule { margin-top:36px; display:flex; flex-wrap:wrap; gap:8px 22px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#e6dccb; }
-    section { padding:84px 22px; }
+    .rule { margin-top:40px; padding-top:18px; border-top:1px solid rgba(246,241,232,.22); display:flex; flex-wrap:wrap; gap:8px 22px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#e6dccb; }
+    .scroll-cue { display:none; position:absolute; z-index:1; right:22px; bottom:56px; writing-mode:vertical-rl; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:#e6d3b0; }
+    .scroll-cue:after { content:""; display:block; width:1px; height:56px; margin:12px auto 0; background:linear-gradient(#e6d3b0,transparent); animation:cue 2.2s ease-in-out infinite; transform-origin:top; }
+
+    /* stats */
+    .stats { padding:0 22px; margin-top:-1px; background:var(--card); border-bottom:1px solid var(--line); }
+    .stats-in { max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); }
+    .stat { padding:26px 0; border-top:1px solid var(--line); }
+    .stat:nth-child(-n+2) { border-top:0; }
+    .stat b { display:block; font-family:"Cormorant Garamond",serif; font-size:clamp(40px,6vw,58px); font-weight:500; line-height:1; color:var(--brass); }
+    .stat span { display:block; margin-top:8px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+
+    section { padding:96px 22px; }
     .wrap { max-width:1240px; margin:0 auto; }
-    .split { display:grid; gap:28px; }
-    .note { color:var(--muted); max-width:36ch; }
-    .reel { margin:36px -22px 0; overflow:hidden; }
-    .reel-track { display:flex; gap:14px; width:max-content; animation:slide 46s linear infinite; }
-    .reel:hover .reel-track { animation-play-state:paused; }
+    .split { display:grid; gap:28px; align-items:start; }
+    .note { color:var(--muted); max-width:38ch; font-size:17px; margin:0; }
+
+    /* reveal */
+    .js .reveal { opacity:0; transform:translateY(22px); transition:opacity .9s var(--ease), transform .9s var(--ease); transition-delay:calc(var(--d,0) * 90ms); }
+    .js .reveal.in { opacity:1; transform:none; }
+
+    /* work reel */
+    .reel { margin:40px -22px 0; overflow-x:auto; scrollbar-width:none; }
+    .reel::-webkit-scrollbar { display:none; }
+    .js .reel { overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+    .reel-track { display:flex; gap:14px; width:max-content; padding:0 22px; }
+    .js .reel-track { animation:slide 60s linear infinite; }
+    .reel:hover .reel-track, .reel:focus-within .reel-track { animation-play-state:paused; }
     .reel figure { margin:0; width:300px; flex:none; }
-    .reel img { width:300px; height:200px; object-fit:cover; }
-    .reel figcaption { padding:10px 2px 0; color:var(--muted); font-size:11px; letter-spacing:.14em; text-transform:uppercase; }
-    .reel figure { overflow:hidden; }
-    .reel img { transition:transform .6s ease; }
-    .reel figure:hover img { transform:scale(1.04); }
-    .lines { list-style:none; padding:0; margin:28px 0 0; }
-    .lines li { display:grid; grid-template-columns:52px 1fr; gap:12px; border-top:1px solid var(--line); padding:18px 0; }
-    .lines b { font-family:"Cormorant Garamond",serif; font-size:28px; font-weight:500; }
-    .lines span { display:block; color:var(--muted); margin-top:4px; }
-    .about { display:grid; gap:28px; align-items:center; }
-    .mark-panel { background:var(--card); padding:36px 20px; display:grid; justify-items:center; }
-    .mark-panel img { width:min(200px,58vw); }
-    .facts { list-style:none; padding:0; margin:22px 0 0; }
-    .facts li { display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--line); padding:12px 0; }
+    .frame { display:block; width:100%; padding:0; border:0; background:none; cursor:zoom-in; overflow:hidden; position:relative; }
+    .frame img { width:300px; height:200px; object-fit:cover; transition:transform .7s var(--ease), filter .5s; }
+    .frame:hover img { transform:scale(1.06); filter:brightness(.92); }
+    .reel figcaption { padding:12px 2px 0; color:var(--muted); font-size:11px; letter-spacing:.14em; text-transform:uppercase; }
+
+    /* lightbox */
+    .lb { position:fixed; inset:0; z-index:90; background:rgba(10,8,6,.94); display:none; align-items:center; justify-content:center; padding:56px 14px 76px; }
+    .lb.open { display:flex; animation:fade .3s ease both; }
+    .lb img { max-width:100%; max-height:100%; object-fit:contain; box-shadow:0 30px 80px rgba(0,0,0,.5); }
+    .lb-cap { position:absolute; left:0; right:0; bottom:26px; text-align:center; color:#e6d3b0; font-size:11px; letter-spacing:.2em; text-transform:uppercase; }
+    .lb button { position:absolute; width:46px; height:46px; border:1px solid rgba(246,241,232,.3); background:rgba(10,8,6,.5); color:#f6f1e8; cursor:pointer; font-size:20px; transition:background .2s, border-color .2s; }
+    .lb button:hover { background:rgba(196,160,106,.25); border-color:#c4a06a; }
+    .lb-x { top:14px; right:14px; } .lb-p { left:14px; top:50%; margin-top:-23px; } .lb-n { right:14px; top:50%; margin-top:-23px; }
+
+    /* services */
+    .lines { list-style:none; padding:0; margin:0; display:grid; gap:14px; }
+    .lines li { background:var(--card); border:1px solid var(--line); padding:28px 26px; position:relative; overflow:hidden; transition:transform .45s var(--ease), border-color .3s, box-shadow .45s; }
+    .lines li:before { content:""; position:absolute; left:0; top:0; width:100%; height:2px; background:var(--brass); transform:scaleX(0); transform-origin:left; transition:transform .5s var(--ease); }
+    .lines li:hover { transform:translateY(-4px); border-color:var(--brass); box-shadow:0 18px 40px rgba(20,17,14,.08); }
+    .lines li:hover:before { transform:scaleX(1); }
+    .lines b { display:block; font-family:"Cormorant Garamond",serif; font-size:20px; font-weight:500; color:var(--brass); margin-bottom:10px; }
+    .lines h3 { font-size:30px; line-height:1.05; }
+    .lines p { color:var(--muted); margin:10px 0 0; }
+
+    /* company */
+    .about { display:grid; gap:36px; align-items:center; }
+    .mark-panel { background:var(--card); border:1px solid var(--line); padding:44px 24px; display:grid; justify-items:center; position:relative; }
+    .mark-panel:after { content:""; position:absolute; inset:10px; border:1px solid var(--brass-soft); pointer-events:none; }
+    .mark-panel img { width:min(260px,62vw); }
+    html[data-theme="dark"] .mark-panel { background:#f3eee6; }
+    .facts { list-style:none; padding:0; margin:26px 0 0; }
+    .facts li { display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--line); padding:14px 0; }
+    .facts li:last-child { border-bottom:1px solid var(--line); }
     .facts span { color:var(--muted); text-align:right; }
+
+    /* register */
     .band { background:#16130f; color:#f3eee6; }
-    .ledger { margin-top:28px; }
-    .ledger div { display:flex; justify-content:space-between; gap:16px; border-top:1px solid rgba(243,238,230,.16); padding:16px 0; }
+    .band .eyebrow { color:#c4a06a; }
+    .ledger { margin-top:6px; }
+    .ledger div { display:flex; justify-content:space-between; align-items:center; gap:16px; border-top:1px solid rgba(243,238,230,.16); padding:18px 0; }
+    .ledger div:last-child { border-bottom:1px solid rgba(243,238,230,.16); }
     .ledger span { letter-spacing:.16em; text-transform:uppercase; font-size:11px; color:#e6d3b0; }
-    .ledger b { font-weight:400; }
-    .clients { margin-top:22px; columns:1; }
-    .clients span { display:block; border-top:1px solid var(--line); padding:12px 0; }
-    .offices { display:grid; gap:22px; margin-top:28px; }
-    .offices article { border-top:1px solid var(--line); padding-top:14px; }
+    .ledger b { font-weight:400; font-variant-numeric:tabular-nums; }
+    .copy { background:none; border:0; padding:6px 0; cursor:pointer; color:inherit; font-weight:400; position:relative; }
+    .copy:after { content:"Copy"; position:absolute; right:100%; top:50%; margin:-7px 14px 0 0; line-height:14px; white-space:nowrap; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#c4a06a; opacity:0; transition:opacity .25s; }
+    .copy:hover:after, .copy:focus-visible:after { opacity:1; }
+    .copy.done:after { content:"Copied"; opacity:1; }
+
+    /* clients */
+    .clients { display:flex; flex-wrap:wrap; gap:10px; }
+    .clients span { border:1px solid var(--line); padding:11px 18px; font-size:15px; transition:border-color .3s, background .3s, transform .3s var(--ease); }
+    .clients span:hover { border-color:var(--brass); background:var(--brass-soft); transform:translateY(-2px); }
+
+    /* offices */
+    .offices { display:grid; gap:14px; margin-top:36px; }
+    .offices article { background:var(--card); border:1px solid var(--line); padding:26px; display:flex; flex-direction:column; gap:10px; transition:border-color .3s, transform .45s var(--ease); }
+    .offices article:hover { border-color:var(--brass); transform:translateY(-3px); }
     .offices small { letter-spacing:.16em; text-transform:uppercase; color:var(--brass); font-size:11px; }
-    .offices p { margin:8px 0 0; font-size:18px; }
-    .contact { display:grid; gap:28px; }
-    form { display:grid; gap:4px; }
-    label { margin-top:14px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
-    input,select,textarea { width:100%; border:0; border-bottom:1px solid var(--line); background:transparent; font:inherit; padding:10px 0; color:inherit; }
-    textarea { min-height:90px; }
-    footer { padding:28px 22px 120px; border-top:1px solid var(--line); }
-    .foot { display:flex; gap:16px; align-items:center; max-width:1240px; }
-    .foot img { width:48px; height:auto; background:var(--card); padding:6px; }
-    .dock { position:fixed; left:12px; right:12px; bottom:12px; display:grid; grid-template-columns:1fr 1.4fr; gap:8px; z-index:30; }
-    .dock a { text-align:center; padding:14px; }
-    @keyframes rise { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+    .offices p { margin:0; font-size:18px; flex:1; }
+    .offices a { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); align-self:flex-start; border-bottom:1px solid var(--line); padding-bottom:3px; transition:color .2s, border-color .2s; }
+    .offices a:hover { color:var(--brass); border-color:var(--brass); }
+
+    /* quote */
+    .contact { display:grid; gap:40px; }
+    .big-links { display:grid; gap:4px; margin:22px 0; font-family:"Cormorant Garamond",serif; font-size:clamp(30px,4vw,40px); line-height:1.15; }
+    .big-links a { width:fit-content; background:linear-gradient(var(--brass),var(--brass)) 0 100%/0 1px no-repeat; transition:background-size .4s var(--ease); }
+    .big-links a:hover { background-size:100% 1px; }
+    .mail { font-size:17px; border-bottom:1px solid var(--line); padding-bottom:2px; }
+    form { display:grid; gap:4px; background:var(--card); border:1px solid var(--line); padding:30px 24px 28px; }
+    label { margin-top:16px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+    input,select,textarea { width:100%; border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; font:inherit; font-size:16px; padding:10px 0; color:inherit; transition:border-color .25s; }
+    input:focus,select:focus,textarea:focus { outline:none; border-bottom-color:var(--brass); }
+    select option { background:var(--card); color:var(--ink); }
+    textarea { min-height:100px; resize:vertical; }
+    .form-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    .form-actions .btn { flex:1 1 180px; }
+    .fine { font-size:13px; color:var(--muted); margin:14px 0 0; }
+
+    footer { padding:44px 22px 120px; border-top:1px solid var(--line); }
+    .foot { max-width:1240px; margin:0 auto; display:grid; gap:26px; }
+    .foot-brand { display:flex; gap:16px; align-items:center; }
+    .foot-brand img { width:52px; height:auto; background:#f3eee6; padding:6px; }
+    .foot nav { display:flex; flex-wrap:wrap; gap:8px 24px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    .foot nav a:hover { color:var(--brass); }
+    .legal { font-size:13px; color:var(--muted); }
+
+    .dock { position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom)); display:grid; grid-template-columns:1fr 1.4fr; gap:8px; z-index:30; box-shadow:0 14px 34px rgba(0,0,0,.28); }
+    .dock a { text-align:center; padding:15px; }
+    .toast { position:fixed; left:50%; bottom:90px; transform:translate(-50%,20px); background:var(--ink); color:var(--paper); padding:10px 18px; font-size:12px; letter-spacing:.1em; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s var(--ease); z-index:95; }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+
+    @keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+    @keyframes fade { from { opacity:0; } to { opacity:1; } }
     @keyframes drift { from { transform:scale(1.04); } to { transform:scale(1.1) translate3d(-1.5%,-1%,0); } }
     @keyframes slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+    @keyframes cue { 0% { transform:scaleY(0); } 50% { transform:scaleY(1); } 100% { transform:scaleY(1); opacity:0; } }
+
+    @media (min-width:560px) { header .head-quote { display:inline-flex; } .offices { grid-template-columns:repeat(2,1fr); } }
     @media (min-width:860px) {
       .links { display:flex; }
-      .split, .about, .contact { grid-template-columns:1fr 1fr; gap:64px; }
-      .clients { columns:2; }
+      .burger, .mobile-nav { display:none !important; }
+      .stats-in { grid-template-columns:repeat(4,1fr); }
+      .stat { border-top:0; padding:34px 0 34px 28px; border-left:1px solid var(--line); }
+      .stat:first-child { border-left:0; padding-left:0; }
+      .split, .about, .contact { grid-template-columns:1fr 1fr; gap:72px; }
+      .lines { grid-template-columns:1fr 1fr; }
       .offices { grid-template-columns:repeat(3,1fr); }
+      .scroll-cue { display:block; }
+      .hero-inner { padding-bottom:56px; }
+      .foot { grid-template-columns:1fr auto; align-items:center; }
+      .legal { grid-column:1 / -1; }
       .dock { display:none; }
-      footer { padding-bottom:36px; }
+      footer { padding-bottom:40px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior:auto; }
       *, *::before, *::after { animation:none !important; transition:none !important; }
+      .js .reveal { opacity:1; transform:none; }
     }
   </style>
 </head>
 <body>
-  <header>
+  <a class="skip" href="#top">Skip to content</a>
+  <header id="header">
     <div class="nav">
-      <a class="brand" href="#top">
-        <img src="logo-mark.png" alt="Motlaitlai mark" />
+      <a class="brand" href="#top" aria-label="Motlaitlai, back to top">
+        <img src="logo-mark-sm.png" alt="" width="38" height="34" />
         <div>
           <strong>MOTLAITLAI</strong>
           <span>Construction & Projects</span>
         </div>
       </a>
-      <nav class="links">
+      <nav class="links" aria-label="Main">
         <a href="#work">Work</a>
+        <a href="#services">Services</a>
         <a href="#company">Company</a>
         <a href="#register">Registers</a>
         <a href="#quote">Quote</a>
       </nav>
-      <button class="theme" id="theme" type="button" aria-label="Toggle dark mode">◐</button>
-      <a class="btn" href="#quote">Request a quote</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
+      <a class="btn head-quote" href="#quote">Request a quote</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
     </div>
+    <nav class="mobile-nav" id="mnav" aria-label="Mobile">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#company">Company</a>
+      <a href="#register">Registers</a>
+      <a href="#quote">Request a quote</a>
+    </nav>
   </header>
+
   <main id="top">
-    <section class="hero">
+    <section class="hero" style="padding:0">
       <div class="hero-inner">
         <div class="kicker">Hartebeespoort · Est. 2017</div>
         <h1>Plans, structure and supply.</h1>
@@ -142,56 +310,66 @@
           <span>3D building plans</span><span>Civil</span><span>Building</span><span>Renovations</span><span>Maintenance</span>
         </div>
       </div>
+      <a class="scroll-cue" href="#work" aria-label="Scroll to our work">Scroll</a>
     </section>
+
+    <div class="stats">
+      <div class="stats-in">
+        <div class="stat reveal"><b>2017</b><span>Established</span></div>
+        <div class="stat reveal" style="--d:1"><b>4</b><span>Lines of work</span></div>
+        <div class="stat reveal" style="--d:2"><b>3</b><span>Offices</span></div>
+        <div class="stat reveal" style="--d:3"><b>5</b><span>Registrations</span></div>
+      </div>
+    </div>
+
     <section id="work">
       <div class="wrap split">
-        <h2>From the drawing to the finished house.</h2>
-        <p class="note">Company photographs, not stock. Hold a frame and the pass pauses.</p>
+        <div class="reveal">
+          <div class="eyebrow">Our work</div>
+          <h2>From the drawing to the finished house.</h2>
+        </div>
+        <p class="note reveal" style="--d:1">Company photographs, not stock. Tap a frame to see it full size.</p>
       </div>
       <div class="wrap">
-        <div class="reel" aria-label="Project photographs">
-          <div class="reel-track">
-            <figure><img src="plans.jpg" alt="3D house design" /><figcaption>01 · 3D plans</figcaption></figure>
-            <figure><img src="render-b.jpg" alt="Terrace house design" /><figcaption>02 · Design</figcaption></figure>
-            <figure><img src="home.jpg" alt="Completed house" /><figcaption>03 · Completed house</figcaption></figure>
-            <figure><img src="garden.jpg" alt="Finished garden" /><figcaption>04 · Handover</figcaption></figure>
-            <figure><img src="bath.jpg" alt="Finished bathroom" /><figcaption>05 · Finishes</figcaption></figure>
-            <figure><img src="brickhouse.jpg" alt="House structure" /><figcaption>06 · Structure</figcaption></figure>
-            <figure><img src="civil.jpg" alt="Civil trench" /><figcaption>07 · Civil works</figcaption></figure>
-            <figure><img src="rdp.jpg" alt="RDP house" /><figcaption>08 · Heidelberg RDP</figcaption></figure>
-            <figure><img src="bricks.jpg" alt="Blocks on site" /><figcaption>09 · Blocks</figcaption></figure>
-            <figure><img src="retail.jpg" alt="Retail counter" /><figcaption>10 · Retail fit-out</figcaption></figure>
-            <figure><img src="plans.jpg" alt="" /><figcaption>01 · 3D plans</figcaption></figure>
-            <figure><img src="render-b.jpg" alt="" /><figcaption>02 · Design</figcaption></figure>
-            <figure><img src="home.jpg" alt="" /><figcaption>03 · Completed house</figcaption></figure>
-            <figure><img src="garden.jpg" alt="" /><figcaption>04 · Handover</figcaption></figure>
-            <figure><img src="bath.jpg" alt="" /><figcaption>05 · Finishes</figcaption></figure>
-            <figure><img src="brickhouse.jpg" alt="" /><figcaption>06 · Structure</figcaption></figure>
-            <figure><img src="civil.jpg" alt="" /><figcaption>07 · Civil works</figcaption></figure>
-            <figure><img src="rdp.jpg" alt="" /><figcaption>08 · Heidelberg RDP</figcaption></figure>
-            <figure><img src="bricks.jpg" alt="" /><figcaption>09 · Blocks</figcaption></figure>
-            <figure><img src="retail.jpg" alt="" /><figcaption>10 · Retail fit-out</figcaption></figure>
+        <div class="reel reveal" id="reel" aria-label="Project photographs">
+          <div class="reel-track" id="track">
+            <figure><button class="frame" type="button"><img src="plans.jpg" alt="3D house design" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>01 · 3D plans</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="render-b.jpg" alt="Terrace house design" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>02 · Design</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="home.jpg" alt="Completed house" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>03 · Completed house</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="garden.jpg" alt="Finished garden" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>04 · Handover</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="bath.jpg" alt="Finished bathroom" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>05 · Finishes</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="brickhouse.jpg" alt="House structure" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>06 · Structure</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="civil.jpg" alt="Civil trench" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>07 · Civil works</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="rdp.jpg" alt="RDP house" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>08 · Heidelberg RDP</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="bricks.jpg" alt="Blocks on site" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>09 · Blocks</figcaption></figure>
+            <figure><button class="frame" type="button"><img src="retail.jpg" alt="Retail counter" width="300" height="200" loading="lazy" decoding="async" /></button><figcaption>10 · Retail fit-out</figcaption></figure>
           </div>
         </div>
       </div>
     </section>
-    <section>
+
+    <section id="services" style="padding-top:0">
       <div class="wrap split">
-        <h2>Four lines of work.</h2>
+        <div class="reveal">
+          <div class="eyebrow">What we do</div>
+          <h2>Four lines of work.</h2>
+        </div>
         <ol class="lines">
-          <li><b>01</b><div>Architecture<span>3D building plans before a brick is laid.</span></div></li>
-          <li><b>02</b><div>Construction<span>Civil and building, including the Heidelberg RDP project.</span></div></li>
-          <li><b>03</b><div>Supply<span>Materials for developers, contractors and private clients.</span></div></li>
-          <li><b>04</b><div>Brick manufacturing<span>Blocks made and set out for the build.</span></div></li>
+          <li class="reveal"><b>01</b><h3>Architecture</h3><p>3D building plans before a brick is laid.</p></li>
+          <li class="reveal" style="--d:1"><b>02</b><h3>Construction</h3><p>Civil and building, including the Heidelberg RDP project.</p></li>
+          <li class="reveal" style="--d:2"><b>03</b><h3>Supply</h3><p>Materials for developers, contractors and private clients.</p></li>
+          <li class="reveal" style="--d:3"><b>04</b><h3>Brick manufacturing</h3><p>Blocks made and set out for the build.</p></li>
         </ol>
       </div>
     </section>
-    <section id="company">
+
+    <section id="company" style="padding-top:0">
       <div class="wrap about">
-        <div class="mark-panel"><img src="logo.png" alt="Motlaitlai Construction and Projects" /></div>
-        <div>
+        <div class="mark-panel reveal"><img src="logo.png" alt="Motlaitlai Construction and Projects" width="260" height="235" loading="lazy" decoding="async" /></div>
+        <div class="reveal" style="--d:1">
+          <div class="eyebrow">The company</div>
           <h2>Named after the founder.</h2>
-          <p class="note">A construction company, contractor and architectural designer. Established in 2017 and named after Mr TG Motlaitlai. Vincent Motlaitlai is the managing director.</p>
+          <p class="note" style="margin-top:18px">A construction company, contractor and architectural designer. Established in 2017 and named after Mr TG Motlaitlai. Vincent Motlaitlai is the managing director.</p>
           <ul class="facts">
             <li>Founder <span>Mr TG Motlaitlai</span></li>
             <li>Managing director <span>Vincent Motlaitlai</span></li>
@@ -201,85 +379,229 @@
         </div>
       </div>
     </section>
+
     <section class="band" id="register">
       <div class="wrap split">
-        <h2>On the register.</h2>
-        <div class="ledger">
-          <div><span>Company</span><b>K2017/349323/07</b></div>
-          <div><span>NHBRC</span><b>3000195612</b></div>
-          <div><span>CIDB</span><b>10145184</b></div>
-          <div><span>CSD</span><b>MAAA0517970</b></div>
+        <div class="reveal">
+          <div class="eyebrow">Credentials</div>
+          <h2>On the register.</h2>
+          <p class="note" style="margin-top:18px;color:#b7aa9c">Tap a number to copy it for your tender or vendor forms.</p>
+        </div>
+        <div class="ledger reveal" style="--d:1">
+          <div><span>Company</span><button class="copy" type="button" data-copy="K2017/349323/07"><b>K2017/349323/07</b></button></div>
+          <div><span>NHBRC</span><button class="copy" type="button" data-copy="3000195612"><b>3000195612</b></button></div>
+          <div><span>CIDB</span><button class="copy" type="button" data-copy="10145184"><b>10145184</b></button></div>
+          <div><span>CSD</span><button class="copy" type="button" data-copy="MAAA0517970"><b>MAAA0517970</b></button></div>
           <div><span>MBSA</span><b>Master Builders</b></div>
           <div><span>SACAP</span><b>Architectural council</b></div>
         </div>
       </div>
     </section>
+
     <section>
       <div class="wrap split">
-        <h2>Who they build for.</h2>
-        <div class="clients">
+        <div class="reveal">
+          <div class="eyebrow">Clients</div>
+          <h2>Who they build for.</h2>
+        </div>
+        <div class="clients reveal" style="--d:1">
           <span>Department sectors</span><span>Retail and shopping malls</span><span>Property developers</span><span>Bank and mining institutions</span><span>Contractors</span><span>Municipalities</span><span>Private sectors</span><span>Individual clients</span>
         </div>
       </div>
     </section>
-    <section id="offices">
+
+    <section id="offices" style="padding-top:0">
       <div class="wrap">
-        <h2>Three addresses.</h2>
+        <div class="reveal">
+          <div class="eyebrow">Where to find us</div>
+          <h2>Three addresses.</h2>
+        </div>
         <div class="offices">
-          <article><small>Headquarters</small><p>749 Melodie, Gateway Residential Estate, Hartebeespoort, North West</p></article>
-          <article><small>Free State</small><p>3765 Election Park, Theunissen, Masilo, 9410</p></article>
-          <article><small>Gauteng</small><p>21/616 Mara Crescent, Cosmo Creek Estate, Zandspruit x4</p></article>
+          <article class="reveal"><small>Headquarters</small><p>749 Melodie, Gateway Residential Estate, Hartebeespoort, North West</p><a href="https://www.google.com/maps/search/?api=1&query=749+Melodie+Gateway+Residential+Estate+Hartebeespoort" target="_blank" rel="noopener">Open in Maps</a></article>
+          <article class="reveal" style="--d:1"><small>Free State</small><p>3765 Election Park, Theunissen, Masilo, 9410</p><a href="https://www.google.com/maps/search/?api=1&query=3765+Election+Park+Theunissen+9410" target="_blank" rel="noopener">Open in Maps</a></article>
+          <article class="reveal" style="--d:2"><small>Gauteng</small><p>21/616 Mara Crescent, Cosmo Creek Estate, Zandspruit x4</p><a href="https://www.google.com/maps/search/?api=1&query=Mara+Crescent+Cosmo+Creek+Estate+Zandspruit" target="_blank" rel="noopener">Open in Maps</a></article>
         </div>
       </div>
     </section>
-    <section id="quote">
+
+    <section id="quote" style="padding-top:0">
       <div class="wrap contact">
-        <div>
+        <div class="reveal">
+          <div class="eyebrow">Get a quote</div>
           <h2>Call or WhatsApp.</h2>
-          <p><a href="tel:+27698342585">069 834 2585</a><br /><a href="tel:+27838948253">083 894 8253</a></p>
-          <p><a href="mailto:motlaitlaiprojects@gmail.com">motlaitlaiprojects@gmail.com</a></p>
+          <div class="big-links">
+            <a href="tel:+27698342585">069 834 2585</a>
+            <a href="tel:+27838948253">083 894 8253</a>
+          </div>
+          <p style="margin:0 0 22px"><a class="mail" href="mailto:motlaitlaiprojects@gmail.com">motlaitlaiprojects@gmail.com</a></p>
           <p class="note">749 Melodie, Gateway Residential Estate, Hartebeespoort, North West.</p>
         </div>
-        <form id="quoteform">
-          <h3 style="font-size:40px">A written scope starts here.</h3>
-          <label for="name">Name</label><input id="name" required />
-          <label for="phone">Phone</label><input id="phone" required />
+        <form id="quoteform" class="reveal" style="--d:1">
+          <h3 style="font-size:40px;line-height:1">A written scope starts here.</h3>
+          <label for="name">Name</label><input id="name" autocomplete="name" required />
+          <label for="phone">Phone</label><input id="phone" type="tel" inputmode="tel" autocomplete="tel" required />
           <label for="job">Work</label>
           <select id="job"><option>3D building plans</option><option>Construction</option><option>Supply</option><option>Brick manufacturing</option><option>Renovation</option></select>
           <label for="msg">Site and details</label><textarea id="msg"></textarea>
-          <button class="btn" style="margin-top:18px" type="submit">Send on WhatsApp</button>
+          <div class="form-actions">
+            <button class="btn" type="submit">Send on WhatsApp</button>
+            <button class="btn ghost" type="button" id="viaMail">Send by email</button>
+          </div>
+          <p class="fine">We reply with a written scope and price.</p>
         </form>
       </div>
     </section>
   </main>
+
   <footer>
-    <div class="wrap foot">
-      <img src="logo-mark.png" alt="Motlaitlai" />
-      <div>Motlaitlai (Pty) Ltd · Construction & Projects<br />Photographs supplied by the company.</div>
+    <div class="foot">
+      <div class="foot-brand">
+        <img src="logo-mark-sm.png" alt="" width="52" height="38" />
+        <div>Motlaitlai (Pty) Ltd · Construction & Projects<br /><span class="legal">Photographs supplied by the company.</span></div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#work">Work</a><a href="#services">Services</a><a href="#company">Company</a><a href="#register">Registers</a><a href="#quote">Quote</a>
+      </nav>
+      <div class="legal">© <span id="yr">2026</span> Motlaitlai Construction & Projects. Established 2017.</div>
     </div>
   </footer>
+
   <div class="dock">
     <a class="btn line" style="background:#17140f" href="tel:+27698342585">Call</a>
     <a class="btn brass" href="https://wa.me/27698342585?text=Hi%2C%20I%20would%20like%20a%20quote%20from%20Motlaitlai%20Construction.">WhatsApp</a>
   </div>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-x" id="lbx" type="button" aria-label="Close">✕</button>
+    <button class="lb-p" id="lbp" type="button" aria-label="Previous photo">‹</button>
+    <img id="lbi" alt="" />
+    <button class="lb-n" id="lbn" type="button" aria-label="Next photo">›</button>
+    <div class="lb-cap" id="lbc"></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
   <script>
     var root = document.documentElement;
-    var saved = localStorage.getItem("motlaitlai-theme");
+    var $ = function (id) { return document.getElementById(id); };
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {} }
+
+    /* theme */
+    var saved = store("motlaitlai-theme");
     if (saved) root.setAttribute("data-theme", saved);
     else if (window.matchMedia("(prefers-color-scheme: dark)").matches) root.setAttribute("data-theme", "dark");
-    document.getElementById("theme").addEventListener("click", function () {
+    $("theme").addEventListener("click", function () {
       var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
-      localStorage.setItem("motlaitlai-theme", next);
+      store("motlaitlai-theme", next);
     });
-    document.getElementById("quoteform").addEventListener("submit", function (e) {
+
+    /* header: shadow on scroll, mobile menu, active link */
+    var header = $("header"), burger = $("burger");
+    function onScroll() { header.classList.toggle("scrolled", window.scrollY > 24); }
+    onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
+    function setMenu(open) {
+      header.classList.toggle("open", open);
+      burger.setAttribute("aria-expanded", open);
+      burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+    burger.addEventListener("click", function () { setMenu(!header.classList.contains("open")); });
+    $("mnav").addEventListener("click", function (e) { if (e.target.tagName === "A") setMenu(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth >= 860) setMenu(false); });
+
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll(".links a"));
+    if ("IntersectionObserver" in window) {
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) navLinks.forEach(function (a) { a.classList.toggle("on", a.getAttribute("href") === "#" + en.target.id); });
+        });
+      }, { rootMargin: "-45% 0px -50% 0px" });
+      ["work", "services", "company", "register", "quote"].forEach(function (id) { spy.observe($(id)); });
+
+      /* reveal on scroll */
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+      }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+      Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function (el) { io.observe(el); });
+    } else {
+      Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function (el) { el.classList.add("in"); });
+    }
+
+    /* gallery: build a seamless loop and a lightbox */
+    var track = $("track");
+    var shots = Array.prototype.map.call(track.querySelectorAll("figure"), function (f) {
+      var img = f.querySelector("img");
+      return { src: img.getAttribute("src"), alt: img.alt, cap: f.querySelector("figcaption").textContent };
+    });
+    Array.prototype.slice.call(track.children).forEach(function (f, i) {
+      var c = f.cloneNode(true);
+      c.setAttribute("aria-hidden", "true");
+      c.querySelector("img").alt = "";
+      c.querySelector("button").tabIndex = -1;
+      c.dataset.i = i;
+      track.appendChild(c);
+    });
+    Array.prototype.forEach.call(track.children, function (f, i) { if (!f.dataset.i) f.dataset.i = i; });
+
+    var lb = $("lb"), lbi = $("lbi"), cur = 0, lastFocus = null;
+    function show(i) {
+      cur = (i + shots.length) % shots.length;
+      lbi.src = shots[cur].src; lbi.alt = shots[cur].alt;
+      $("lbc").textContent = shots[cur].cap;
+    }
+    function openLb(i) { lastFocus = document.activeElement; show(i); lb.classList.add("open"); document.body.style.overflow = "hidden"; $("lbx").focus(); }
+    function closeLb() { lb.classList.remove("open"); document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
+    track.addEventListener("click", function (e) {
+      var f = e.target.closest("figure"); if (f) openLb(parseInt(f.dataset.i, 10));
+    });
+    $("lbx").addEventListener("click", closeLb);
+    $("lbp").addEventListener("click", function () { show(cur - 1); });
+    $("lbn").addEventListener("click", function () { show(cur + 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { if (lb.classList.contains("open")) closeLb(); else setMenu(false); }
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "ArrowLeft") show(cur - 1);
+      if (e.key === "ArrowRight") show(cur + 1);
+    });
+    var tx = null;
+    lb.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", function (e) {
+      if (tx === null) return;
+      var dx = e.changedTouches[0].clientX - tx; tx = null;
+      if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+    });
+
+    /* copy registration numbers */
+    var toast = $("toast"), tt;
+    function say(msg) { toast.textContent = msg; toast.classList.add("show"); clearTimeout(tt); tt = setTimeout(function () { toast.classList.remove("show"); }, 1800); }
+    Array.prototype.forEach.call(document.querySelectorAll(".copy"), function (b) {
+      b.addEventListener("click", function () {
+        var v = b.getAttribute("data-copy");
+        var done = function () { b.classList.add("done"); say("Copied " + v); setTimeout(function () { b.classList.remove("done"); }, 1800); };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(done, function () { say(v); });
+        else say(v);
+      });
+    });
+
+    /* quote form: WhatsApp or email */
+    function formText() {
+      return "Hi, quote request.\nName: " + $("name").value.trim()
+        + "\nPhone: " + $("phone").value.trim()
+        + "\nJob: " + $("job").value
+        + "\nDetails: " + $("msg").value.trim();
+    }
+    $("quoteform").addEventListener("submit", function (e) {
       e.preventDefault();
-      var text = "Hi, quote request.%0AName: " + encodeURIComponent(document.getElementById("name").value.trim())
-        + "%0APhone: " + encodeURIComponent(document.getElementById("phone").value.trim())
-        + "%0AJob: " + encodeURIComponent(document.getElementById("job").value)
-        + "%0ADetails: " + encodeURIComponent(document.getElementById("msg").value.trim());
-      location.href = "https://wa.me/27698342585?text=" + text;
+      location.href = "https://wa.me/27698342585?text=" + encodeURIComponent(formText());
     });
+    $("viaMail").addEventListener("click", function () {
+      var f = $("quoteform");
+      if (!f.reportValidity()) return;
+      location.href = "mailto:motlaitlaiprojects@gmail.com?subject=" + encodeURIComponent("Quote request: " + $("job").value)
+        + "&body=" + encodeURIComponent(formText());
+    });
+
+    $("yr").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
